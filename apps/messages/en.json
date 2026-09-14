@@ -1,0 +1,984 @@
+{
+  "brand": {
+    "republicName": "Bloctel"
+  },
+  "meta": {
+    "searchPlaceholder": "Search the Bloctel portal…",
+    "defaultTitle": "Bloctel",
+    "suffix": "Bloctel",
+    "description": "Official portal of Bloctel, the national service for managing unwanted telephone canvassing: registration in the opt-out register, reporting abusive canvassing, consumer rights and professional obligations."
+  },
+  "header": {
+    "serviceTitle": "Bloctel",
+    "serviceTagline": "The national service against unwanted telephone canvassing",
+    "homeTitle": "Bloctel portal home",
+    "myGouv": "Sign in",
+    "signIn": "Sign in",
+    "accountLabel": "My account",
+    "logoutLink": "Sign out",
+    "account": {
+      "profile": "My profile",
+      "settings": "Account settings"
+    }
+  },
+  "nav": {
+    "primary": {
+      "mesDroits": "My rights",
+      "maProtection": "My protection",
+      "signaler": "Report",
+      "professionnels": "Professionals",
+      "reglementation": "Regulation",
+      "services": "Services",
+      "aide": "Help"
+    },
+    "panel": {
+      "mesDroits": {
+        "title": "My rights",
+        "text": "Understand telephone canvassing and the rights that protect you.",
+        "allLink": "All about my rights",
+        "demarchage": {
+          "title": "Canvassing",
+          "questCeQueLeDemarchage": "What is telephone canvassing?",
+          "demarchageAutorise": "Authorised canvassing",
+          "demarchageInterdit": "Prohibited canvassing",
+          "reconnaitreUnAppelAbusif": "Recognising an abusive call"
+        },
+        "vosDroits": {
+          "title": "Your rights",
+          "droitOpposition": "Right to object",
+          "protectionDesConsommateurs": "Consumer protection",
+          "donneesPersonnelles": "Personal data",
+          "recoursEtReclamations": "Appeals and complaints"
+        },
+        "situations": {
+          "title": "Situations",
+          "particuliers": "Individuals",
+          "numerosMobiles": "Mobile numbers",
+          "numerosProfessionnels": "Business numbers",
+          "casParticuliers": "Special cases"
+        },
+        "comprendre": {
+          "title": "Understanding",
+          "fonctionnementDeBloctel": "How Bloctel works",
+          "acteursDuDispositif": "Who is involved",
+          "chiffresCles": "Key figures",
+          "questionsSurLeDemarchage": "Questions about canvassing"
+        }
+      },
+      "maProtection": {
+        "title": "My protection",
+        "text": "Manage my registration in the opt-out register and my contact preferences.",
+        "allLink": "All about my protection",
+        "monRegistre": {
+          "title": "My register",
+          "mInscrire": "Register",
+          "verifierMonInscription": "Check my registration",
+          "renouvelerMonInscription": "Renew my registration",
+          "meDesinscrire": "Unregister"
+        },
+        "coordonnees": {
+          "title": "Contact details",
+          "ajouterUnNumero": "Add a number",
+          "modifierUnNumero": "Change a number",
+          "supprimerUnNumero": "Remove a number",
+          "numerosEtLignes": "Numbers and lines"
+        },
+        "preferences": {
+          "title": "Preferences",
+          "canauxDeContact": "Contact channels",
+          "typesDAppels": "Types of calls",
+          "horairesEtFrequence": "Times and frequency",
+          "notifications": "Notifications"
+        },
+        "consentements": {
+          "title": "Consents",
+          "consentementCommercial": "Commercial consent",
+          "retirerMonConsentement": "Withdraw my consent",
+          "consentementDesTiers": "Third-party consent",
+          "gererMesConsentements": "Manage my consents"
+        }
+      },
+      "signaler": {
+        "title": "Report",
+        "text": "Report abusive canvassing and track how your report is handled.",
+        "allLink": "All about reporting",
+        "nouveauSignalement": {
+          "title": "New report",
+          "signalerUnAppel": "Report a call",
+          "signalerUnSms": "Report an SMS",
+          "signalerUnNumero": "Report a number",
+          "informationsAFournir": "Information to provide"
+        },
+        "mesSignalements": {
+          "title": "My reports",
+          "suivreUnSignalement": "Track a report",
+          "historique": "History",
+          "modifierUnSignalement": "Change a report",
+          "supprimerUnSignalement": "Delete a report"
+        },
+        "informations": {
+          "title": "Information",
+          "questCeQuUnSignalement": "What is a report?",
+          "quiPeutSignaler": "Who can report?",
+          "confidentialite": "Confidentiality",
+          "signalementsEtDroits": "Reports and rights"
+        },
+        "suites": {
+          "title": "Outcomes",
+          "traitementDesSignalements": "How reports are handled",
+          "enquetesEtControles": "Investigations and checks",
+          "sanctions": "Penalties",
+          "resultats": "Results"
+        }
+      },
+      "professionnels": {
+        "title": "Professionals",
+        "text": "Comply with the rules and consult the opt-out list.",
+        "allLink": "All for professionals",
+        "monEntreprise": {
+          "title": "My company",
+          "espaceProfessionnel": "Professional area",
+          "declarerMonActivite": "Declare my activity",
+          "gererMesAcces": "Manage my access",
+          "conformite": "Compliance"
+        },
+        "verifier": {
+          "title": "Check",
+          "consulterLaListe": "Consult the list",
+          "interrogerUnNumero": "Query a number",
+          "miseAJourDesDonnees": "Data updates",
+          "tracabiliteDesConsultations": "Query traceability"
+        },
+        "consentements": {
+          "title": "Consents",
+          "recueillirLeConsentement": "Collect consent",
+          "prouverLeConsentement": "Prove consent",
+          "dureeDeValidite": "Validity period",
+          "exceptions": "Exceptions"
+        },
+        "campagnes": {
+          "title": "Campaigns",
+          "preparerUneCampagne": "Prepare a campaign",
+          "fichiersDAppel": "Call files",
+          "controlerLesListes": "Check the lists",
+          "bonnesPratiques": "Good practices"
+        }
+      },
+      "reglementation": {
+        "title": "Regulation",
+        "text": "The legal framework, obligations and checks on telephone canvassing.",
+        "allLink": "All the regulation",
+        "cadreLegal": {
+          "title": "Legal framework",
+          "textesDeReference": "Reference texts",
+          "loiEtDecrets": "Laws and decrees",
+          "codeDeLaConsommation": "Consumer code",
+          "jurisprudence": "Case law"
+        },
+        "obligations": {
+          "title": "Obligations",
+          "consultationObligatoire": "Mandatory consultation",
+          "informationDesConsommateurs": "Informing consumers",
+          "obligationsDesOperateurs": "Operator obligations",
+          "obligationsDesPlateformes": "Platform obligations"
+        },
+        "restrictions": {
+          "title": "Restrictions",
+          "horairesDAppel": "Calling hours",
+          "joursEtPeriodes": "Days and periods",
+          "numerosInterdits": "Prohibited numbers",
+          "secteursReglementes": "Regulated sectors"
+        },
+        "controles": {
+          "title": "Checks",
+          "autoriteDeControle": "Supervisory authority",
+          "proceduresDeControle": "Inspection procedures",
+          "controlesEtSignalements": "Checks and reports",
+          "resultatsDesControles": "Inspection results"
+        }
+      },
+      "services": {
+        "title": "Services",
+        "text": "Access the citizen and professional portals and public data.",
+        "allLink": "All services",
+        "portailCitoyen": {
+          "title": "Citizen portal",
+          "mInscrire": "Register",
+          "signalerUnAppel": "Report a call",
+          "monEspace": "My account",
+          "aideEnLigne": "Online help"
+        },
+        "portailProfessionnel": {
+          "title": "Professional portal",
+          "seConnecter": "Sign in",
+          "interrogerLaListe": "Query the list",
+          "abonnements": "Subscriptions",
+          "support": "Support"
+        },
+        "developpeurs": {
+          "title": "Developers",
+          "apiBloctel": "Bloctel API",
+          "documentation": "Documentation",
+          "guidesTechniques": "Technical guides",
+          "statutDuService": "Service status"
+        },
+        "donneesPubliques": {
+          "title": "Public data",
+          "statistiques": "Statistics",
+          "jeuxDeDonnees": "Datasets",
+          "rapports": "Reports",
+          "openData": "Open data"
+        }
+      },
+      "aide": {
+        "title": "Help",
+        "text": "Find an answer, a guide or contact support.",
+        "allLink": "All help",
+        "questionsFrequentes": {
+          "title": "Frequently asked questions",
+          "inscription": "Registration",
+          "signalement": "Reporting",
+          "droits": "Rights",
+          "professionnels": "Professionals"
+        },
+        "guides": {
+          "title": "Guides",
+          "guideDuCitoyen": "Citizen guide",
+          "guideDuProfessionnel": "Professional guide",
+          "tutoriels": "Tutorials",
+          "fichesPratiques": "Practical factsheets"
+        },
+        "assistance": {
+          "title": "Support",
+          "contacterLAssistance": "Contact support",
+          "formulaireDeContact": "Contact form",
+          "numeroDAide": "Helpline",
+          "horaires": "Opening hours"
+        },
+        "aPropos": {
+          "title": "About",
+          "questCeQueBloctel": "What is Bloctel?",
+          "missions": "Missions",
+          "quiSommesNous": "Who we are",
+          "contact": "Contact"
+        }
+      }
+    }
+  },
+  "footer": {
+    "contentDescription": "Bloctel is the national service that allows consumers to opt out of unwanted telephone canvassing and to report abusive calls.",
+    "bottom": {
+      "contact": "Contact",
+      "planDuPortail": "Sitemap",
+      "documentsOpposables": "Binding documents",
+      "privacy": "Privacy",
+      "cookies": "Cookie management",
+      "publications": "Official publications"
+    },
+    "license": "Unless otherwise stated, all content on this site is available under the <link>APSL licence</link>.",
+    "columns": {
+      "mesDroits": {
+        "title": "My rights"
+      },
+      "maProtection": {
+        "title": "My protection"
+      },
+      "signaler": {
+        "title": "Report"
+      },
+      "professionnels": {
+        "title": "Professionals"
+      },
+      "reglementation": {
+        "title": "Regulation"
+      },
+      "services": {
+        "title": "Services"
+      },
+      "aide": {
+        "title": "Help"
+      }
+    }
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "skipToFooter": "Skip to footer",
+    "backToTop": {
+      "ariaLabel": "Back to top"
+    },
+    "cookiePopup": {
+      "ariaLabel": "Cookie consent banner",
+      "title": "Your privacy matters",
+      "message": "We use cookies to improve your browsing experience, measure audience and keep the portal secure. You can accept or decline them.",
+      "accept": "Accept all",
+      "decline": "Decline all",
+      "manage": "Manage my choices"
+    }
+  },
+  "pages": {
+    "contact": {
+      "meta": {
+        "title": "Contact",
+        "description": "Contact the Bloctel: contact form, details and opening hours."
+      },
+      "hero": {
+        "kicker": "Contact",
+        "title": "Contact the Bloctel",
+        "lead": "A question about the currency, monetary policy, banking institutions or the services of the Central Bank? Your message will be forwarded to the relevant department."
+      },
+      "formSection": {
+        "kicker": "Form",
+        "title": "Write to us",
+        "lead": "Fill in the form below: a pre-filled email will open in your mail client. No data is stored on the portal."
+      },
+      "form": {
+        "requiredField": "This field is required.",
+        "invalidEmail": "Please enter a valid email address.",
+        "recipientLabel": "Recipient",
+        "selectRecipient": "Choose a recipient",
+        "presidency": "Office of the Governor",
+        "nameLabel": "Full name",
+        "namePlaceholder": "Your full name",
+        "emailFieldLabel": "Email address",
+        "emailPlaceholder": "firstname.lastname@example.aor",
+        "subjectLabel": "Subject",
+        "subjectPlaceholder": "The subject of your message",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Your message…",
+        "sendButton": "Send message"
+      },
+      "recipients": {
+        "presidence": "Office of the Governor",
+        "communications": "Communications Directorate",
+        "presse": "Press office",
+        "monnaie": "Banknotes and Currency Directorate",
+        "etablissements": "Banking Institutions Directorate"
+      },
+      "channels": {
+        "kicker": "Details",
+        "title": "Other ways to reach us",
+        "lead": "The form is the recommended channel for written requests. You can also contact the Central Bank at the following details.",
+        "facts": {
+          "email": {
+            "label": "Email",
+            "value": "contact@bca.astoria-gouv.org"
+          },
+          "phone": {
+            "label": "Phone",
+            "value": "+33 (0)1 00 00 00 00"
+          },
+          "address": {
+            "label": "Address",
+            "value": "1 place de la Monnaie, 75001 Astoria"
+          },
+          "hours": {
+            "label": "Opening hours",
+            "value": "Monday to Friday, 9 am to 5 pm"
+          }
+        }
+      }
+    },
+    "legal": {
+      "meta": {
+        "title": "Legal information",
+        "description": "The legal information of the Bloctel portal: terms of use, privacy, accessibility and cookie management."
+      },
+      "related": {
+        "title": "Other information pages",
+        "kicker": "Legal information",
+        "accessibility": {
+          "label": "Accessibility",
+          "desc": "The accessibility level of the portal and its declaration."
+        },
+        "privacy": {
+          "label": "Privacy",
+          "desc": "The personal data processed by the portal and the rights that follow."
+        },
+        "terms": {
+          "label": "Terms of use",
+          "desc": "The rules for using the Bloctel portal."
+        },
+        "cookies": {
+          "label": "Cookie management",
+          "desc": "The cookies set by the portal and how to manage them."
+        },
+        "sitemap": {
+          "label": "Portal sitemap",
+          "desc": "All the pages of the portal, organised by theme."
+        }
+      },
+      "landing": {
+        "hero": {
+          "kicker": "Legal information",
+          "title": "Legal information",
+          "lead": "The information documents of the Bloctel portal: terms of use, privacy policy, accessibility declaration and cookie management.",
+          "notice": "Demonstration documents: the portal is under construction."
+        }
+      },
+      "accessibility": {
+        "meta": {
+          "title": "Accessibility",
+          "description": "The accessibility declaration of the Bloctel portal."
+        },
+        "hero": {
+          "kicker": "Legal information",
+          "title": "Accessibility declaration",
+          "lead": "The Bloctel is committed to making its portal accessible, in accordance with the law of 8 July 2019. This declaration applies to the Bloctel portal.",
+          "notice": "Last updated: 12 September 2026."
+        },
+        "sections": {
+          "declaration": {
+            "kicker": "Commitment",
+            "title": "Our commitment",
+            "lead": "The Bloctel is committed to digital accessibility to make its portal usable by everyone, whatever the disability, device or connection.",
+            "paragraphs": {
+              "p1": "Digital accessibility means making content and services accessible to all, in particular to people with disabilities. It is an issue of equal opportunity and a public service commitment.",
+              "p2": "The Bloctel portal is built according to the general accessibility improvement framework (RGAA), to offer a consistent browsing experience to all visitors."
+            }
+          },
+          "conformite": {
+            "kicker": "Compliance",
+            "title": "Compliance status",
+            "lead": "The Bloctel portal is partially compliant with the general accessibility improvement framework (RGAA), version 4.1, level AA.",
+            "bullets": {
+              "b1": "Keyboard and touch navigation is supported on all pages.",
+              "b2": "Text content respects the contrast and legibility rules defined by the framework.",
+              "b3": "Some advanced interactive components remain to be harmonised with the framework recommendations."
+            }
+          },
+          "nonAccessibles": {
+            "kicker": "Exceptions",
+            "title": "Non-accessible content",
+            "lead": "Despite our vigilance, some content may present access difficulties. The following items are not yet accessible:",
+            "bullets": {
+              "b1": "Documents published in PDF format before the entry into force of this declaration.",
+              "b2": "Some data charts and visualisations, for which a text alternative is planned.",
+              "b3": "A few videos without a full transcript, currently being processed."
+            }
+          },
+          "etablissement": {
+            "kicker": "Methodology",
+            "title": "Establishment of this declaration",
+            "lead": "This declaration was established on 12 September 2026.",
+            "facts": {
+              "tests": {
+                "label": "Tests carried out",
+                "value": "Audit performed on a representative sample of portal pages"
+              },
+              "referentiel": {
+                "label": "Framework",
+                "value": "RGAA version 4.1, level AA"
+              },
+              "outils": {
+                "label": "Tools and methods",
+                "value": "Keyboard navigation, screen readers, automated contrast checking"
+              }
+            }
+          },
+          "retour": {
+            "kicker": "Contact",
+            "title": "Feedback and contact",
+            "lead": "If you encounter an accessibility issue that prevents you from accessing a content or a service of the portal, you can report it to us:",
+            "paragraphs": {
+              "p1": "Write to us via the Contact page, specifying the nature of the problem and the page concerned. We commit to responding within five working days."
+            }
+          },
+          "voiesRecours": {
+            "kicker": "Remedies",
+            "title": "Remedies",
+            "lead": "If you have not received a satisfactory response to your report, you can refer the matter to:",
+            "bullets": {
+              "b1": "The Defender of Rights, which can be contacted online or by post.",
+              "b2": "The departmental conciliation commission or the competent court.",
+              "b3": "Any procedure provided for by the law of 8 July 2019 and its implementing decree."
+            }
+          }
+        }
+      },
+      "privacy": {
+        "meta": {
+          "title": "Privacy",
+          "description": "The privacy policy of the Bloctel portal: personal data, purposes and rights."
+        },
+        "hero": {
+          "kicker": "Legal information",
+          "title": "Privacy policy",
+          "lead": "The Bloctel pays particular attention to the protection of personal data. This policy explains which data the portal processes, why, and what rights you have.",
+          "notice": "Last updated: 12 September 2026."
+        },
+        "sections": {
+          "responsable": {
+            "kicker": "Controller",
+            "title": "Data controller",
+            "lead": "The personal data processing operations carried out on the portal are under the responsibility of the Bloctel.",
+            "paragraphs": {
+              "p1": "For any question relating to the protection of your personal data, you can contact our Data Protection Officer (DPO) at the address below."
+            },
+            "facts": {
+              "responsable": {
+                "label": "Controller",
+                "value": "Bloctel"
+              },
+              "adresse": {
+                "label": "Address",
+                "value": "1 place de la Monnaie, 75001 Astoria"
+              },
+              "dpo": {
+                "label": "Data Protection Officer",
+                "value": "dpo@bca.astoria-gouv.org"
+              }
+            }
+          },
+          "donnees": {
+            "kicker": "Data",
+            "title": "Data collected",
+            "lead": "The portal collects a minimal volume of data, limited to what is strictly necessary for the operation of the service.",
+            "bullets": {
+              "b1": "Browsing data: IP address, pages visited, browser and screen resolution, for audience measurement and security purposes.",
+              "b2": "Platform identification data: login, email address and preferences, only for authenticated services.",
+              "b3": "Declarative data: what you voluntarily enter in a portal form.",
+              "b4": "No payment data, banking data or sensitive data is processed by the public portal."
+            }
+          },
+          "finalites": {
+            "kicker": "Purposes",
+            "title": "Purposes and legal bases",
+            "lead": "Each processing operation on the portal pursues a defined purpose and relies on a legal basis.",
+            "paragraphs": {
+              "p1": "Audience measurement relies on the user's consent, collected via the cookie management banner. Processing operations related to the security of the portal fall within the public service mission of the Central Bank.",
+              "p2": "Processing operations related to authenticated services rely on the performance of the public service mission or, where applicable, on a contract or explicit consent."
+            }
+          },
+          "conservation": {
+            "kicker": "Retention",
+            "title": "Retention period",
+            "lead": "Data is kept only for as long as necessary for the purpose pursued.",
+            "facts": {
+              "duree": {
+                "label": "Retention period",
+                "value": "Limited periods defined for each processing operation"
+              },
+              "critere": {
+                "label": "Criterion",
+                "value": "Necessity of the purpose, legal time limits and applicable limitation"
+              }
+            }
+          },
+          "droits": {
+            "kicker": "Your rights",
+            "title": "Your rights",
+            "lead": "In accordance with the applicable regulations, you have rights over your personal data:",
+            "bullets": {
+              "b1": "Right of access, rectification and erasure of your data.",
+              "b2": "Right to restriction of and objection to processing.",
+              "b3": "Right to data portability of the data you have provided.",
+              "b4": "Right to withdraw your consent at any time, without affecting the lawfulness of prior processing.",
+              "b5": "Right to lodge a complaint with the competent supervisory authority."
+            }
+          },
+          "cookies": {
+            "kicker": "Cookies",
+            "title": "Cookies and audience measurement",
+            "lead": "The portal uses strictly necessary cookies as well as, subject to your consent, audience measurement cookies.",
+            "paragraphs": {
+              "p1": "You can accept or refuse these cookies at any time from the dedicated banner, or from the cookie management page."
+            },
+            "notice": "The cookie management page precisely describes the cookie families used and their lifetime.",
+            "cta": "Go to the cookie management page"
+          }
+        }
+      },
+      "terms": {
+        "meta": {
+          "title": "Terms of use",
+          "description": "The terms of use of the Bloctel portal."
+        },
+        "hero": {
+          "kicker": "Legal information",
+          "title": "Terms of use",
+          "lead": "Access to and use of the Bloctel portal are subject to the terms set out below. By browsing the portal, you accept them.",
+          "notice": "Last updated: 12 September 2026."
+        },
+        "sections": {
+          "objet": {
+            "kicker": "Purpose",
+            "title": "Purpose",
+            "lead": "The Bloctel portal is the institutional website of the Central Bank of the Republic of Astoria.",
+            "paragraphs": {
+              "p1": "It presents the missions of the Central Bank, monetary policy, official data and statistics, as well as the services offered to financial institutions, the State and citizens.",
+              "p2": "These terms define the rules for using the portal and govern the liability of the publisher and of the user."
+            }
+          },
+          "utilisation": {
+            "kicker": "Use",
+            "title": "Use of the portal",
+            "lead": "The portal is made available for information and public service purposes. Its use is free of charge.",
+            "bullets": {
+              "b1": "Content is provided for information purposes only and does not constitute legal, financial or professional advice.",
+              "b2": "It is forbidden to use the portal for fraudulent, malicious or unlawful purposes.",
+              "b3": "Any attempt to alter data or disrupt the service is prohibited.",
+              "b4": "The publisher strives to ensure the accuracy of the published information, without guaranteeing the complete absence of errors."
+            }
+          },
+          "contenus": {
+            "kicker": "Content",
+            "title": "Content and data",
+            "lead": "Content published on the portal belongs to the Bloctel or to third-party rights holders.",
+            "paragraphs": {
+              "p1": "Unless otherwise stated, content (texts, data, images, tables) may be reused in accordance with the applicable public information reuse licence.",
+              "p2": "The trademarks, logos and distinctive signs of the Central Bank and of the Republic of Astoria may not be reproduced without prior authorisation."
+            }
+          },
+          "responsabilite": {
+            "kicker": "Liability",
+            "title": "Liability",
+            "lead": "The publisher does its best to ensure the availability and accuracy of the portal, within the limits of the available technical means.",
+            "paragraphs": {
+              "p1": "The publisher's liability cannot be engaged in the event of temporary interruption of the service, of links to third-party websites, or of inappropriate use of the published information.",
+              "p2": "The user is responsible for the use they make of the portal's information and of the data they enter."
+            }
+          },
+          "liens": {
+            "kicker": "Links",
+            "title": "Links",
+            "lead": "The portal may contain links to third-party websites, public or private.",
+            "paragraphs": {
+              "p1": "The publisher exercises no control over these websites and is not responsible for their content, accessibility or data protection practices."
+            }
+          },
+          "modification": {
+            "kicker": "Evolution",
+            "title": "Modification of the terms",
+            "lead": "These terms may be modified at any time, in particular to reflect changes to the service.",
+            "paragraphs": {
+              "p1": "The applicable version is the one in force at the time of your browsing. Modified terms enter into force upon publication."
+            },
+            "notice": "Any evolution of the portal gives rise to an update of this page."
+          }
+        }
+      },
+      "cookies": {
+        "meta": {
+          "title": "Cookie management",
+          "description": "The cookies used by the Bloctel portal and how to manage them."
+        },
+        "hero": {
+          "kicker": "Legal information",
+          "title": "Cookie management",
+          "lead": "This page describes the cookies set by the Bloctel portal, their purpose and how to accept or refuse them.",
+          "notice": "Last updated: 12 September 2026."
+        },
+        "sections": {
+          "definition": {
+            "kicker": "Definition",
+            "title": "What is a cookie?",
+            "lead": "A cookie is a small text file placed on your device when you visit a website.",
+            "paragraphs": {
+              "p1": "Cookies store information about your browsing (preferences, language, audience measurement) to improve your experience and understand how the portal is used.",
+              "p2": "The portal only sets strictly necessary cookies and, subject to your consent, audience measurement cookies. No advertising cookies are used."
+            }
+          },
+          "cookiesDeposes": {
+            "kicker": "Inventory",
+            "title": "Cookies set by the portal",
+            "lead": "The table below lists the cookie families used by the portal and their retention period.",
+            "table": {
+              "caption": "Portal cookie inventory",
+              "headers": {
+                "0": "Cookie",
+                "1": "Purpose",
+                "2": "Retention period"
+              },
+              "rows": {
+                "0": {
+                  "0": "bc_consent",
+                  "1": "Stores your cookie management choice",
+                  "2": "6 months"
+                },
+                "1": {
+                  "0": "bc_session",
+                  "1": "Technical operation of the portal (browsing session)",
+                  "2": "Session duration"
+                },
+                "2": {
+                  "0": "bc_lang",
+                  "1": "Stores the chosen language",
+                  "2": "13 months"
+                },
+                "3": {
+                  "0": "bc_audience",
+                  "1": "Anonymised audience measurement, subject to your consent",
+                  "2": "13 months"
+                }
+              },
+              "note": "Demonstration inventory: the final list of cookies will be published with the full rollout of the portal."
+            }
+          },
+          "gestion": {
+            "kicker": "Management",
+            "title": "Manage your cookies",
+            "lead": "You can accept or refuse non-essential cookies at any time, whichever method suits you best:",
+            "bullets": {
+              "b1": "From the cookie management banner, displayed on your first visit at the bottom left of the screen.",
+              "b2": "By configuring your browser to refuse or delete cookies.",
+              "b3": "By deleting the cookies already placed from your browser settings."
+            },
+            "notice": "Refusing audience measurement cookies does not affect how the portal works."
+          }
+        }
+      }
+    },
+    "sitemap": {
+      "meta": {
+        "title": "Portal sitemap",
+        "description": "The sitemap of the Bloctel portal: all the pages of the website, organised by theme."
+      },
+      "hero": {
+        "kicker": "Portal sitemap",
+        "title": "Portal sitemap",
+        "lead": "All the pages of the Bloctel portal, organised according to the seven navigation entries."
+      },
+      "sections": {
+        "portail": {
+          "kicker": "Navigation",
+          "title": "Portal entries",
+          "lead": "Each portal entry opens four themes, accessible below in their navigation order."
+        },
+        "transversal": {
+          "kicker": "Quick access",
+          "title": "Transversal pages",
+          "lead": "The utility and information pages of the portal, reachable from the footer.",
+          "links": {
+            "contact": "Contact",
+            "accessibility": "Accessibility",
+            "privacy": "Privacy",
+            "terms": "Terms of use",
+            "cookies": "Cookie management",
+            "publications": "Official publications",
+            "documentsOpposables": "Binding documents"
+          }
+        }
+      }
+    }
+  },
+  "stayInTouch": {
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "desc": "Each month, receive the essentials from the Bloctel: monetary policy decisions, publications and institution news.",
+      "label": "Your email address",
+      "placeholder": "firstname.lastname@example.aor",
+      "submit": "Subscribe",
+      "success": "Your subscription is confirmed. Thank you!",
+      "hint": "You can unsubscribe at any time.",
+      "invalidEmail": "Please enter a valid email address."
+    },
+    "follow": {
+      "title": "Follow the Central Bank",
+      "items": {
+        "x": "X",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "threads": "Threads"
+      }
+    }
+  },
+  "home": {
+    "metaTitle": "Bloctel",
+    "hero": {
+      "kicker": "Public service",
+      "title": "Take back control of your communications",
+      "lead": "Bloctel is the public service that lets you manage the commercial communications you choose to receive or refuse, and report those you do not want.",
+      "ctaPreferences": "Manage my preferences",
+      "ctaSignaler": "Report unwanted communication",
+      "proLink": "Are you a professional? Access the professional portal"
+    },
+    "search": {
+      "title": "Search the portal",
+      "label": "Search",
+      "placeholder": "Search a right, a number, a procedure…",
+      "popularLabel": "Frequent searches",
+      "popular": {
+        "mInscrire": "Register with Bloctel",
+        "signalement": "Report a call",
+        "demarchage": "Telephone canvassing",
+        "preferences": "Manage my preferences",
+        "reglementation": "Regulation"
+      }
+    },
+    "how": {
+      "kicker": "Understanding Bloctel",
+      "title": "How does it work?",
+      "lead": "Bloctel is based on a simple principle: you decide which commercial communications you are willing to receive.",
+      "steps": {
+        "choisir": "You choose",
+        "enregistre": "Bloctel records your preferences",
+        "verifient": "Professionals check their campaigns"
+      },
+      "note": "Your preferences apply to professionals required to consult the opt-out register before any campaign."
+    },
+    "controls": {
+      "kicker": "What can I control?",
+      "title": "Your communication channels",
+      "lead": "Bloctel lets you manage the main commercial communication channels.",
+      "items": {
+        "telephone": {
+          "title": "Telephone",
+          "desc": "Decide whether you wish to receive commercial calls and report those that ignore your choice."
+        },
+        "sms": {
+          "title": "SMS",
+          "desc": "Manage the commercial messages you receive on your phone."
+        },
+        "email": {
+          "title": "E-mail",
+          "desc": "Manage the commercial e-mails you receive."
+        },
+        "courrier": {
+          "title": "Postal mail",
+          "desc": "Manage advertising and mail you receive by post."
+        },
+        "notifications": {
+          "title": "Digital notifications",
+          "desc": "Manage the commercial solicitations sent to your devices."
+        }
+      }
+    },
+    "preferences": {
+      "kicker": "Manage my preferences",
+      "title": "Your communication preferences",
+      "lead": "A single space to indicate, for each channel, the communications you agree to receive.",
+      "demoNote": "Demonstration interface: the preferences below illustrate the concept. Sign in to manage your real preferences.",
+      "cta": "Manage my preferences",
+      "items": {
+        "appels": {
+          "channel": "Commercial calls",
+          "status": "Blocked"
+        },
+        "sms": {
+          "channel": "Commercial SMS",
+          "status": "Allowed"
+        },
+        "emails": {
+          "channel": "Commercial e-mails",
+          "status": "Blocked"
+        },
+        "courrier": {
+          "channel": "Postal mail",
+          "status": "Blocked"
+        }
+      }
+    },
+    "report": {
+      "kicker": "Report",
+      "title": "Report unwanted communication",
+      "lead": "A commercial communication bothers you despite your objection? Report it; your report will be taken into account and followed up.",
+      "steps": {
+        "identifier": {
+          "title": "Identify the communication",
+          "text": "Note the number, channel and date of the communication you received."
+        },
+        "transmettre": {
+          "title": "Submit the information",
+          "text": "Fill in the report form with the details you have."
+        },
+        "suivre": {
+          "title": "Track the report",
+          "text": "Check the progress and outcome of your report."
+        }
+      },
+      "note": "A report may contribute to investigations carried out by the competent authorities.",
+      "cta": "Make a report",
+      "ctaSecondary": "View my reports"
+    },
+    "pro": {
+      "kicker": "Professionals",
+      "title": "The professional portal",
+      "lead": "Businesses and organisations running commercial campaigns have obligations: consult the register, respect consumer choices and keep proof of consent.",
+      "entries": {
+        "verifierContact": {
+          "title": "Check a contact",
+          "desc": "Query the register before contacting a number."
+        },
+        "verifierCampagne": {
+          "title": "Check a campaign",
+          "desc": "Check your files before each campaign."
+        },
+        "apiBloctel": {
+          "title": "Bloctel API",
+          "desc": "Integrate checking into your tools."
+        },
+        "obligations": {
+          "title": "Professional obligations",
+          "desc": "Know your obligations and the penalties involved."
+        }
+      },
+      "cta": "Access the professional portal"
+    },
+    "proHow": {
+      "kicker": "How it works for professionals",
+      "title": "How do you check a campaign?",
+      "lead": "Before each campaign, the professional makes sure they do not contact numbers that have opted out.",
+      "steps": {
+        "fichier": "Your file",
+        "verification": "Bloctel check",
+        "contacts": "Allowed / excluded contacts",
+        "campagne": "Compliant campaign"
+      },
+      "note": "The check covers numbers opted out of canvassing, according to your preferences."
+    },
+    "legal": {
+      "kicker": "Rights and regulation",
+      "title": "Your rights, the legal framework",
+      "lead": "Telephone canvassing is regulated. Discover your rights, professional obligations and the checks in place.",
+      "entries": {
+        "vosDroits": "Your rights",
+        "consentement": "Consent",
+        "revocation": "Withdrawal",
+        "exceptions": "Exceptions",
+        "obligations": "Professional obligations",
+        "controles": "Checks and penalties"
+      },
+      "cta": "View the regulation"
+    },
+    "help": {
+      "kicker": "Help",
+      "title": "Where to find help?",
+      "lead": "A question, a doubt, a problem? The answers and useful contacts are gathered here.",
+      "entries": {
+        "questionsFrequentes": {
+          "title": "Frequently asked questions",
+          "desc": "Answers to the most common questions."
+        },
+        "guides": {
+          "title": "Guides",
+          "desc": "Step-by-step guides for citizens and professionals."
+        },
+        "assistance": {
+          "title": "Support",
+          "desc": "A question without an answer? Contact support."
+        },
+        "contact": {
+          "title": "Contact",
+          "desc": "The service's contact details."
+        }
+      },
+      "cta": "All help"
+    },
+    "trust": {
+      "kicker": "Transparency",
+      "title": "A trusted public service",
+      "lead": "Bloctel is a public service. Transparency about how it works, its availability and the protection of your data is part of its mission.",
+      "items": {
+        "etatService": "Service status",
+        "disponibilite": "Availability",
+        "api": "API",
+        "donneesPubliques": "Public data",
+        "securite": "Security",
+        "protectionDonnees": "Data protection",
+        "aPropos": "About Bloctel"
+      },
+      "note": "The data published reflects how the service works; no statistics are shown until an official source is available."
+    }
+  }
+}

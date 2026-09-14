@@ -1,6 +1,7 @@
 /**
- * URL structure of the public portal of the Ministry of Defense and of the
- * Armed Forces of Astoria (`defense.gouv.aor`).
+ * URL structure of the public portal of Bloctel, the national service for
+ * managing unwanted commercial communications of the Republic of Astoria
+ * (`bloctel.gouv.aor`).
  *
  * Hrefs are locale-agnostic pathnames: the next-intl Link (registered as the
  * ADS link renderer) prefixes the active locale automatically. Labels are
@@ -20,24 +21,24 @@
  * theme, section or link never requires rewriting a component — it only
  * requires editing this file (and the matching message keys).
  *
- * The information architecture reflects the institutional perimeter of the
- * Ministry of Defense and of the Armed Forces. It is organised from the core
- * of the defense mission towards the means, then towards the administrative
- * institution — not the reverse:
+ * The information architecture is organised around the visitor and their
+ * protection against unwanted commercial prospecting — not around the
+ * administrative organisation that runs the service. It follows the citizen
+ * journey, from rights to action:
  *
- *   Défense nationale         → comprendre : la politique, la stratégie et la préparation de la défense
- *   Forces armées             → organiser  : les composantes militaires au niveau institutionnel
- *   Opérations                → engager    : l'engagement des forces armées
- *   Renseignement & Cyberdéfense → protéger : le renseignement militaire et la cyberdéfense
- *   Personnel & Service       → servir     : les femmes et les hommes qui servent la défense
- *   Capacités & Industrie     → développer : les équipements, les programmes et l'industrie de défense
- *   Le Ministère              → administrer : l'institution, son administration, sa transparence
+ *   Mes droits      → comprendre : le démarchage, les droits et les situations
+ *   Ma protection   → se protéger : le registre, les coordonnées, les préférences et consentements
+ *   Signaler        → agir       : déclarer un démarchage abusif et en suivre le traitement
+ *   Professionnels  → se conformer : consulter la liste, recueillir le consentement, piloter les campagnes
+ *   Réglementation  → connaître  : le cadre légal, les obligations, les restrictions et les contrôles
+ *   Services        → accéder    : les portails citoyen et professionnel, les développeurs, les données
+ *   Aide            → être aidé  : les questions fréquentes, les guides et l'assistance
  *
- * This navigation deliberately keeps a ministry-of-defense perimeter: the
- * operational detail of the Armed Forces (units, military trades, recruitment,
- * everyday military life, force activities) belongs to the future
- * `mil.gouv.aor` portal and is not reproduced here. `defense.gouv.aor` only
- * provides the institutional entry points towards those forces.
+ * The structure deliberately keeps a Bloctel perimeter: the operational
+ * treatment of reports (investigations, sanctions, litigation) belongs to the
+ * competent authorities and is only exposed here through the entry points
+ * that matter to the visitor. It is sufficiently generic to grow with the
+ * service without inventing new sections just to fill the 7 × 4 × 4 model.
  *
  * The structure is validated both at compile time (the tuple types below
  * enforce exactly 7 themes × 4 sections × 4 links) and at runtime
@@ -50,18 +51,18 @@ export const PORTAL_HOME = "/";
 
 /**
  * The seven entries of the portal — both `nav.primary` and `footer.columns`
- * keys. The six first entries are the functional navigation (from the core
- * mission to the means); the seventh, `leMinistere`, is the distinct
- * institutional entry, intentionally placed last.
+ * keys. The first three entries carry the citizen journey (rights,
+ * protection, reporting); the fourth addresses professionals; the last three
+ * are the reference, service and support entries.
  */
 export type PrimaryNavKey =
-  | "defenseNationale"
-  | "forcesArmees"
-  | "operations"
-  | "renseignementCyberdefense"
-  | "personnelService"
-  | "capacitesIndustrie"
-  | "leMinistere";
+  | "mesDroits"
+  | "maProtection"
+  | "signaler"
+  | "professionnels"
+  | "reglementation"
+  | "services"
+  | "aide";
 
 /** A destination inside a mega-menu panel; its label is a `nav.panel` message key. */
 export type NavigationLink = {
@@ -106,11 +107,11 @@ export type NavigationItems = readonly [
  * One top-level entry of the Government Header navigation.
  *
  * Navigation principle (info.gouv.fr-inspired, adapted to Astoria): the header
- * is organised around the missions of the ministry of defense and the
- * understanding of the defense system — not around a ministry's internal
- * structure. Each entry opens a mega-menu panel composed of
+ * is organised around the visitor journey and their protection — not around
+ * the internal structure of the administration. Each entry opens a mega-menu
+ * panel composed of
  *  - a leader band: the entry name, a one-line description and the main
- *    action of the section (“Tout sur la défense nationale”, …),
+ *    action of the section (“Tout sur mes droits”, …),
  *  - four sections, each headed by its title and followed by its four
  *    destinations.
  *
@@ -140,13 +141,13 @@ export type FooterColumn = {
 };
 
 export const sectionPaths = {
-  defenseNationale: "/defense-nationale",
-  forcesArmees: "/forces-armees",
-  operations: "/operations",
-  renseignementCyberdefense: "/renseignement-et-cyberdefense",
-  personnelService: "/personnel-et-service",
-  capacitesIndustrie: "/capacites-et-industrie",
-  leMinistere: "/le-ministere",
+  mesDroits: "/mes-droits",
+  maProtection: "/ma-protection",
+  signaler: "/signaler",
+  professionnels: "/professionnels",
+  reglementation: "/reglementation",
+  services: "/services",
+  aide: "/aide",
 } as const;
 
 export const legalPaths = {
@@ -251,23 +252,21 @@ export function countNavigationLinks(
 }
 
 /**
- * Main navigation of the Government Header of the Ministry of Defense and of
- * the Armed Forces of Astoria — the permanent information architecture of the
- * portal, organised in seven entries:
+ * Main navigation of the Government Header of Bloctel — the permanent
+ * information architecture of the portal, organised in seven entries:
  *
- *   Défense nationale             → comprendre : la stratégie, la politique, la planification et la résilience
- *   Forces armées                 → organiser  : l'Armée de Terre, la Marine, l'Armée de l'Air et de l'Espace, les forces interarmées
- *   Opérations                    → engager    : les opérations nationales et extérieures, la préparation opérationnelle
- *   Renseignement & Cyberdéfense   → protéger  : le renseignement, la cyberdéfense, la sécurité des systèmes
- *   Personnel & Service           → servir     : le recrutement, les carrières, la formation, la réserve
- *   Capacités & Industrie         → développer : les équipements, les programmes, l'industrie, la recherche
- *   Le Ministère                  → administrer : l'institution, l'administration, le budget, la transparence
+ *   Mes droits      → comprendre : le démarchage, les droits, les situations et la compréhension du dispositif
+ *   Ma protection   → se protéger : le registre, les coordonnées, les préférences et les consentements
+ *   Signaler        → agir       : créer et suivre un signalement, connaître les suites
+ *   Professionnels  → se conformer : l'entreprise, la consultation de la liste, les consentements et les campagnes
+ *   Réglementation  → connaître  : le cadre légal, les obligations, les restrictions et les contrôles
+ *   Services        → accéder    : les portails citoyen et professionnel, les développeurs et les données publiques
+ *   Aide            → être aidé  : les questions fréquentes, les guides, l'assistance et la présentation du service
  *
- * The six first entries present the *public-policy* perimeter of the ministry
- * — from the heart of the defense mission towards the means; the seventh,
- * distinct, presents the institution itself and is deliberately placed last.
- * The operational detail of the Armed Forces belongs to `mil.gouv.aor` and is
- * not absorbed here.
+ * The first three entries follow the citizen journey; the fourth is the
+ * distinct professional journey; the last three are the reference, access and
+ * support entries. This keeps the two audiences clearly separated without
+ * turning the navigation into a mirror of the administrative organisation.
  *
  * Each entry opens a mega-menu panel with a leader band and four sections —
  * each section headed by its title and followed by its four destinations. The
@@ -279,373 +278,376 @@ export function countNavigationLinks(
 export const primaryNavigation: ReadonlyArray<NavigationSection> = [
   {
     type: "megaMenu",
-    labelKey: "defenseNationale",
-    href: sectionPaths.defenseNationale,
+    labelKey: "mesDroits",
+    href: sectionPaths.mesDroits,
     leader: {
-      titleKey: "defenseNationale.title",
-      paragraphKey: "defenseNationale.text",
+      titleKey: "mesDroits.title",
+      paragraphKey: "mesDroits.text",
       link: {
-        labelKey: "defenseNationale.allLink",
-        href: sectionPaths.defenseNationale,
+        labelKey: "mesDroits.allLink",
+        href: sectionPaths.mesDroits,
       },
     },
     primaryItems: [
       {
-        labelKey: "defenseNationale.strategieDeDefense.title",
-        href: `${sectionPaths.defenseNationale}/strategie-de-defense`,
+        labelKey: "mesDroits.demarchage.title",
+        href: `${sectionPaths.mesDroits}/demarchage`,
         links: [
-          { labelKey: "defenseNationale.strategieDeDefense.strategieNationale", href: `${sectionPaths.defenseNationale}/strategie-de-defense/strategie-nationale` },
-          { labelKey: "defenseNationale.strategieDeDefense.revueStrategique", href: `${sectionPaths.defenseNationale}/strategie-de-defense/revue-strategique` },
-          { labelKey: "defenseNationale.strategieDeDefense.doctrineDemploiDesForces", href: `${sectionPaths.defenseNationale}/strategie-de-defense/doctrine-d-emploi-des-forces` },
-          { labelKey: "defenseNationale.strategieDeDefense.documentsDeReference", href: `${sectionPaths.defenseNationale}/strategie-de-defense/documents-de-reference` },
+          { labelKey: "mesDroits.demarchage.questCeQueLeDemarchage", href: `${sectionPaths.mesDroits}/demarchage/quest-ce-que-le-demarchage` },
+          { labelKey: "mesDroits.demarchage.demarchageAutorise", href: `${sectionPaths.mesDroits}/demarchage/demarchage-autorise` },
+          { labelKey: "mesDroits.demarchage.demarchageInterdit", href: `${sectionPaths.mesDroits}/demarchage/demarchage-interdit` },
+          { labelKey: "mesDroits.demarchage.reconnaitreUnAppelAbusif", href: `${sectionPaths.mesDroits}/demarchage/reconnaitre-un-appel-abusif` },
         ],
       },
       {
-        labelKey: "defenseNationale.politiqueDeDefense.title",
-        href: `${sectionPaths.defenseNationale}/politique-de-defense`,
+        labelKey: "mesDroits.vosDroits.title",
+        href: `${sectionPaths.mesDroits}/vos-droits`,
         links: [
-          { labelKey: "defenseNationale.politiqueDeDefense.priorites", href: `${sectionPaths.defenseNationale}/politique-de-defense/priorites` },
-          { labelKey: "defenseNationale.politiqueDeDefense.programmationMilitaire", href: `${sectionPaths.defenseNationale}/politique-de-defense/programmation-militaire` },
-          { labelKey: "defenseNationale.politiqueDeDefense.dissuasion", href: `${sectionPaths.defenseNationale}/politique-de-defense/dissuasion` },
-          { labelKey: "defenseNationale.politiqueDeDefense.alliancesEtTraites", href: `${sectionPaths.defenseNationale}/politique-de-defense/alliances-et-traites` },
+          { labelKey: "mesDroits.vosDroits.droitOpposition", href: `${sectionPaths.mesDroits}/vos-droits/droit-d-opposition` },
+          { labelKey: "mesDroits.vosDroits.protectionDesConsommateurs", href: `${sectionPaths.mesDroits}/vos-droits/protection-des-consommateurs` },
+          { labelKey: "mesDroits.vosDroits.donneesPersonnelles", href: `${sectionPaths.mesDroits}/vos-droits/donnees-personnelles` },
+          { labelKey: "mesDroits.vosDroits.recoursEtReclamations", href: `${sectionPaths.mesDroits}/vos-droits/recours-et-reclamations` },
         ],
       },
       {
-        labelKey: "defenseNationale.planificationEtPreparation.title",
-        href: `${sectionPaths.defenseNationale}/planification-et-preparation`,
+        labelKey: "mesDroits.situations.title",
+        href: `${sectionPaths.mesDroits}/situations`,
         links: [
-          { labelKey: "defenseNationale.planificationEtPreparation.planificationDeDefense", href: `${sectionPaths.defenseNationale}/planification-et-preparation/planification-de-defense` },
-          { labelKey: "defenseNationale.planificationEtPreparation.preparationDeLaDefense", href: `${sectionPaths.defenseNationale}/planification-et-preparation/preparation-de-la-defense` },
-          { labelKey: "defenseNationale.planificationEtPreparation.mobilisationNationale", href: `${sectionPaths.defenseNationale}/planification-et-preparation/mobilisation-nationale` },
-          { labelKey: "defenseNationale.planificationEtPreparation.plansDeDefense", href: `${sectionPaths.defenseNationale}/planification-et-preparation/plans-de-defense` },
+          { labelKey: "mesDroits.situations.particuliers", href: `${sectionPaths.mesDroits}/situations/particuliers` },
+          { labelKey: "mesDroits.situations.numerosMobiles", href: `${sectionPaths.mesDroits}/situations/numeros-mobiles` },
+          { labelKey: "mesDroits.situations.numerosProfessionnels", href: `${sectionPaths.mesDroits}/situations/numeros-professionnels` },
+          { labelKey: "mesDroits.situations.casParticuliers", href: `${sectionPaths.mesDroits}/situations/cas-particuliers` },
         ],
       },
       {
-        labelKey: "defenseNationale.souveraineteEtResilience.title",
-        href: `${sectionPaths.defenseNationale}/souverainete-et-resilience`,
+        labelKey: "mesDroits.comprendre.title",
+        href: `${sectionPaths.mesDroits}/comprendre`,
         links: [
-          { labelKey: "defenseNationale.souveraineteEtResilience.souveraineteNationale", href: `${sectionPaths.defenseNationale}/souverainete-et-resilience/souverainete-nationale` },
-          { labelKey: "defenseNationale.souveraineteEtResilience.resilienceNationale", href: `${sectionPaths.defenseNationale}/souverainete-et-resilience/resilience-nationale` },
-          { labelKey: "defenseNationale.souveraineteEtResilience.securiteNationale", href: `${sectionPaths.defenseNationale}/souverainete-et-resilience/securite-nationale` },
-          { labelKey: "defenseNationale.souveraineteEtResilience.protectionDesInteretsVitaux", href: `${sectionPaths.defenseNationale}/souverainete-et-resilience/protection-des-interets-vitaux` },
+          { labelKey: "mesDroits.comprendre.fonctionnementDeBloctel", href: `${sectionPaths.mesDroits}/comprendre/fonctionnement-de-bloctel` },
+          { labelKey: "mesDroits.comprendre.acteursDuDispositif", href: `${sectionPaths.mesDroits}/comprendre/acteurs-du-dispositif` },
+          { labelKey: "mesDroits.comprendre.chiffresCles", href: `${sectionPaths.mesDroits}/comprendre/chiffres-cles` },
+          { labelKey: "mesDroits.comprendre.questionsSurLeDemarchage", href: `${sectionPaths.mesDroits}/comprendre/questions-sur-le-demarchage` },
         ],
       },
     ],
   },
   {
     type: "megaMenu",
-    labelKey: "forcesArmees",
-    href: sectionPaths.forcesArmees,
+    labelKey: "maProtection",
+    href: sectionPaths.maProtection,
     leader: {
-      titleKey: "forcesArmees.title",
-      paragraphKey: "forcesArmees.text",
-      link: { labelKey: "forcesArmees.allLink", href: sectionPaths.forcesArmees },
-    },
-    primaryItems: [
-      {
-        labelKey: "forcesArmees.armeeDeTerre.title",
-        href: `${sectionPaths.forcesArmees}/armee-de-terre`,
-        links: [
-          { labelKey: "forcesArmees.armeeDeTerre.presentation", href: `${sectionPaths.forcesArmees}/armee-de-terre/presentation` },
-          { labelKey: "forcesArmees.armeeDeTerre.organisation", href: `${sectionPaths.forcesArmees}/armee-de-terre/organisation` },
-          { labelKey: "forcesArmees.armeeDeTerre.missions", href: `${sectionPaths.forcesArmees}/armee-de-terre/missions` },
-          { labelKey: "forcesArmees.armeeDeTerre.carrieres", href: `${sectionPaths.forcesArmees}/armee-de-terre/carrieres` },
-        ],
-      },
-      {
-        labelKey: "forcesArmees.marine.title",
-        href: `${sectionPaths.forcesArmees}/marine`,
-        links: [
-          { labelKey: "forcesArmees.marine.presentation", href: `${sectionPaths.forcesArmees}/marine/presentation` },
-          { labelKey: "forcesArmees.marine.organisation", href: `${sectionPaths.forcesArmees}/marine/organisation` },
-          { labelKey: "forcesArmees.marine.missions", href: `${sectionPaths.forcesArmees}/marine/missions` },
-          { labelKey: "forcesArmees.marine.carrieres", href: `${sectionPaths.forcesArmees}/marine/carrieres` },
-        ],
-      },
-      {
-        labelKey: "forcesArmees.armeeDeLAirEtDeLEspace.title",
-        href: `${sectionPaths.forcesArmees}/armee-de-l-air-et-de-l-espace`,
-        links: [
-          { labelKey: "forcesArmees.armeeDeLAirEtDeLEspace.presentation", href: `${sectionPaths.forcesArmees}/armee-de-l-air-et-de-l-espace/presentation` },
-          { labelKey: "forcesArmees.armeeDeLAirEtDeLEspace.organisation", href: `${sectionPaths.forcesArmees}/armee-de-l-air-et-de-l-espace/organisation` },
-          { labelKey: "forcesArmees.armeeDeLAirEtDeLEspace.missions", href: `${sectionPaths.forcesArmees}/armee-de-l-air-et-de-l-espace/missions` },
-          { labelKey: "forcesArmees.armeeDeLAirEtDeLEspace.carrieres", href: `${sectionPaths.forcesArmees}/armee-de-l-air-et-de-l-espace/carrieres` },
-        ],
-      },
-      {
-        labelKey: "forcesArmees.forcesInterarmeesEtServices.title",
-        href: `${sectionPaths.forcesArmees}/forces-interarmees-et-services`,
-        links: [
-          { labelKey: "forcesArmees.forcesInterarmeesEtServices.etatMajorDesArmees", href: `${sectionPaths.forcesArmees}/forces-interarmees-et-services/etat-major-des-armees` },
-          { labelKey: "forcesArmees.forcesInterarmeesEtServices.commandementInterarmees", href: `${sectionPaths.forcesArmees}/forces-interarmees-et-services/commandement-interarmees` },
-          { labelKey: "forcesArmees.forcesInterarmeesEtServices.forcesSpeciales", href: `${sectionPaths.forcesArmees}/forces-interarmees-et-services/forces-speciales` },
-          { labelKey: "forcesArmees.forcesInterarmeesEtServices.servicesDeSoutien", href: `${sectionPaths.forcesArmees}/forces-interarmees-et-services/services-de-soutien` },
-        ],
-      },
-    ],
-  },
-  {
-    type: "megaMenu",
-    labelKey: "operations",
-    href: sectionPaths.operations,
-    leader: {
-      titleKey: "operations.title",
-      paragraphKey: "operations.text",
-      link: { labelKey: "operations.allLink", href: sectionPaths.operations },
-    },
-    primaryItems: [
-      {
-        labelKey: "operations.operationsNationales.title",
-        href: `${sectionPaths.operations}/operations-nationales`,
-        links: [
-          { labelKey: "operations.operationsNationales.protectionDuTerritoire", href: `${sectionPaths.operations}/operations-nationales/protection-du-territoire` },
-          { labelKey: "operations.operationsNationales.missionsDeSecurite", href: `${sectionPaths.operations}/operations-nationales/missions-de-securite` },
-          { labelKey: "operations.operationsNationales.soutienAuxPopulations", href: `${sectionPaths.operations}/operations-nationales/soutien-aux-populations` },
-          { labelKey: "operations.operationsNationales.secoursEtUrgence", href: `${sectionPaths.operations}/operations-nationales/secours-et-urgence` },
-        ],
-      },
-      {
-        labelKey: "operations.operationsExterieures.title",
-        href: `${sectionPaths.operations}/operations-exterieures`,
-        links: [
-          { labelKey: "operations.operationsExterieures.engagementsExterieurs", href: `${sectionPaths.operations}/operations-exterieures/engagements-exterieurs` },
-          { labelKey: "operations.operationsExterieures.operationsDePaix", href: `${sectionPaths.operations}/operations-exterieures/operations-de-paix` },
-          { labelKey: "operations.operationsExterieures.cooperationOperationnelle", href: `${sectionPaths.operations}/operations-exterieures/cooperation-operationnelle` },
-          { labelKey: "operations.operationsExterieures.bilanDesOperations", href: `${sectionPaths.operations}/operations-exterieures/bilan-des-operations` },
-        ],
-      },
-      {
-        labelKey: "operations.preparationOperationnelle.title",
-        href: `${sectionPaths.operations}/preparation-operationnelle`,
-        links: [
-          { labelKey: "operations.preparationOperationnelle.entrainement", href: `${sectionPaths.operations}/preparation-operationnelle/entrainement` },
-          { labelKey: "operations.preparationOperationnelle.exercices", href: `${sectionPaths.operations}/preparation-operationnelle/exercices` },
-          { labelKey: "operations.preparationOperationnelle.disponibiliteOperationnelle", href: `${sectionPaths.operations}/preparation-operationnelle/disponibilite-operationnelle` },
-          { labelKey: "operations.preparationOperationnelle.doctrineOperationnelle", href: `${sectionPaths.operations}/preparation-operationnelle/doctrine-operationnelle` },
-        ],
-      },
-      {
-        labelKey: "operations.retourDExperienceEtActualites.title",
-        href: `${sectionPaths.operations}/retour-d-experience-et-actualites`,
-        links: [
-          { labelKey: "operations.retourDExperienceEtActualites.retoursDExperience", href: `${sectionPaths.operations}/retour-d-experience-et-actualites/retours-d-experience` },
-          { labelKey: "operations.retourDExperienceEtActualites.enseignementsOperationnels", href: `${sectionPaths.operations}/retour-d-experience-et-actualites/enseignements-operationnels` },
-          { labelKey: "operations.retourDExperienceEtActualites.actualitesOperationnelles", href: `${sectionPaths.operations}/retour-d-experience-et-actualites/actualites-operationnelles` },
-          { labelKey: "operations.retourDExperienceEtActualites.situationOperationnelle", href: `${sectionPaths.operations}/retour-d-experience-et-actualites/situation-operationnelle` },
-        ],
-      },
-    ],
-  },
-  {
-    type: "megaMenu",
-    labelKey: "renseignementCyberdefense",
-    href: sectionPaths.renseignementCyberdefense,
-    leader: {
-      titleKey: "renseignementCyberdefense.title",
-      paragraphKey: "renseignementCyberdefense.text",
+      titleKey: "maProtection.title",
+      paragraphKey: "maProtection.text",
       link: {
-        labelKey: "renseignementCyberdefense.allLink",
-        href: sectionPaths.renseignementCyberdefense,
+        labelKey: "maProtection.allLink",
+        href: sectionPaths.maProtection,
       },
     },
     primaryItems: [
       {
-        labelKey: "renseignementCyberdefense.renseignementMilitaire.title",
-        href: `${sectionPaths.renseignementCyberdefense}/renseignement-militaire`,
+        labelKey: "maProtection.monRegistre.title",
+        href: `${sectionPaths.maProtection}/mon-registre`,
         links: [
-          { labelKey: "renseignementCyberdefense.renseignementMilitaire.missions", href: `${sectionPaths.renseignementCyberdefense}/renseignement-militaire/missions` },
-          { labelKey: "renseignementCyberdefense.renseignementMilitaire.organisation", href: `${sectionPaths.renseignementCyberdefense}/renseignement-militaire/organisation` },
-          { labelKey: "renseignementCyberdefense.renseignementMilitaire.cadreJuridique", href: `${sectionPaths.renseignementCyberdefense}/renseignement-militaire/cadre-juridique` },
-          { labelKey: "renseignementCyberdefense.renseignementMilitaire.cooperationInterministerielle", href: `${sectionPaths.renseignementCyberdefense}/renseignement-militaire/cooperation-interministerielle` },
+          { labelKey: "maProtection.monRegistre.mInscrire", href: `${sectionPaths.maProtection}/mon-registre/m-inscrire` },
+          { labelKey: "maProtection.monRegistre.verifierMonInscription", href: `${sectionPaths.maProtection}/mon-registre/verifier-mon-inscription` },
+          { labelKey: "maProtection.monRegistre.renouvelerMonInscription", href: `${sectionPaths.maProtection}/mon-registre/renouveler-mon-inscription` },
+          { labelKey: "maProtection.monRegistre.meDesinscrire", href: `${sectionPaths.maProtection}/mon-registre/me-desinscrire` },
         ],
       },
       {
-        labelKey: "renseignementCyberdefense.cyberdefense.title",
-        href: `${sectionPaths.renseignementCyberdefense}/cyberdefense`,
+        labelKey: "maProtection.coordonnees.title",
+        href: `${sectionPaths.maProtection}/coordonnees`,
         links: [
-          { labelKey: "renseignementCyberdefense.cyberdefense.protectionDesSystemes", href: `${sectionPaths.renseignementCyberdefense}/cyberdefense/protection-des-systemes` },
-          { labelKey: "renseignementCyberdefense.cyberdefense.defenseDesReseaux", href: `${sectionPaths.renseignementCyberdefense}/cyberdefense/defense-des-reseaux` },
-          { labelKey: "renseignementCyberdefense.cyberdefense.lutteInformatiqueDefensive", href: `${sectionPaths.renseignementCyberdefense}/cyberdefense/lutte-informatique-defensive` },
-          { labelKey: "renseignementCyberdefense.cyberdefense.gestionDeCriseCyber", href: `${sectionPaths.renseignementCyberdefense}/cyberdefense/gestion-de-crise-cyber` },
+          { labelKey: "maProtection.coordonnees.ajouterUnNumero", href: `${sectionPaths.maProtection}/coordonnees/ajouter-un-numero` },
+          { labelKey: "maProtection.coordonnees.modifierUnNumero", href: `${sectionPaths.maProtection}/coordonnees/modifier-un-numero` },
+          { labelKey: "maProtection.coordonnees.supprimerUnNumero", href: `${sectionPaths.maProtection}/coordonnees/supprimer-un-numero` },
+          { labelKey: "maProtection.coordonnees.numerosEtLignes", href: `${sectionPaths.maProtection}/coordonnees/numeros-et-lignes` },
         ],
       },
       {
-        labelKey: "renseignementCyberdefense.securiteDesSystemesEtDeLInformation.title",
-        href: `${sectionPaths.renseignementCyberdefense}/securite-des-systemes-et-de-l-information`,
+        labelKey: "maProtection.preferences.title",
+        href: `${sectionPaths.maProtection}/preferences`,
         links: [
-          { labelKey: "renseignementCyberdefense.securiteDesSystemesEtDeLInformation.securiteDeLInformation", href: `${sectionPaths.renseignementCyberdefense}/securite-des-systemes-et-de-l-information/securite-de-l-information` },
-          { labelKey: "renseignementCyberdefense.securiteDesSystemesEtDeLInformation.protectionDesDonnees", href: `${sectionPaths.renseignementCyberdefense}/securite-des-systemes-et-de-l-information/protection-des-donnees` },
-          { labelKey: "renseignementCyberdefense.securiteDesSystemesEtDeLInformation.homologationEtCertification", href: `${sectionPaths.renseignementCyberdefense}/securite-des-systemes-et-de-l-information/homologation-et-certification` },
-          { labelKey: "renseignementCyberdefense.securiteDesSystemesEtDeLInformation.cryptologie", href: `${sectionPaths.renseignementCyberdefense}/securite-des-systemes-et-de-l-information/cryptologie` },
+          { labelKey: "maProtection.preferences.canauxDeContact", href: `${sectionPaths.maProtection}/preferences/canaux-de-contact` },
+          { labelKey: "maProtection.preferences.typesDAppels", href: `${sectionPaths.maProtection}/preferences/types-d-appels` },
+          { labelKey: "maProtection.preferences.horairesEtFrequence", href: `${sectionPaths.maProtection}/preferences/horaires-et-frequence` },
+          { labelKey: "maProtection.preferences.notifications", href: `${sectionPaths.maProtection}/preferences/notifications` },
         ],
       },
       {
-        labelKey: "renseignementCyberdefense.menacesInformationnelles.title",
-        href: `${sectionPaths.renseignementCyberdefense}/menaces-informationnelles`,
+        labelKey: "maProtection.consentements.title",
+        href: `${sectionPaths.maProtection}/consentements`,
         links: [
-          { labelKey: "renseignementCyberdefense.menacesInformationnelles.lutteContreLaDesinformation", href: `${sectionPaths.renseignementCyberdefense}/menaces-informationnelles/lutte-contre-la-desinformation` },
-          { labelKey: "renseignementCyberdefense.menacesInformationnelles.ingerencesEtrangeres", href: `${sectionPaths.renseignementCyberdefense}/menaces-informationnelles/ingerences-etrangeres` },
-          { labelKey: "renseignementCyberdefense.menacesInformationnelles.manipulationDeLInformation", href: `${sectionPaths.renseignementCyberdefense}/menaces-informationnelles/manipulation-de-l-information` },
-          { labelKey: "renseignementCyberdefense.menacesInformationnelles.sensibilisationEtPrevention", href: `${sectionPaths.renseignementCyberdefense}/menaces-informationnelles/sensibilisation-et-prevention` },
+          { labelKey: "maProtection.consentements.consentementCommercial", href: `${sectionPaths.maProtection}/consentements/consentement-commercial` },
+          { labelKey: "maProtection.consentements.retirerMonConsentement", href: `${sectionPaths.maProtection}/consentements/retirer-mon-consentement` },
+          { labelKey: "maProtection.consentements.consentementDesTiers", href: `${sectionPaths.maProtection}/consentements/consentement-des-tiers` },
+          { labelKey: "maProtection.consentements.gererMesConsentements", href: `${sectionPaths.maProtection}/consentements/gerer-mes-consentements` },
         ],
       },
     ],
   },
   {
     type: "megaMenu",
-    labelKey: "personnelService",
-    href: sectionPaths.personnelService,
+    labelKey: "signaler",
+    href: sectionPaths.signaler,
     leader: {
-      titleKey: "personnelService.title",
-      paragraphKey: "personnelService.text",
-      link: { labelKey: "personnelService.allLink", href: sectionPaths.personnelService },
+      titleKey: "signaler.title",
+      paragraphKey: "signaler.text",
+      link: { labelKey: "signaler.allLink", href: sectionPaths.signaler },
     },
     primaryItems: [
       {
-        labelKey: "personnelService.recrutement.title",
-        href: `${sectionPaths.personnelService}/recrutement`,
+        labelKey: "signaler.nouveauSignalement.title",
+        href: `${sectionPaths.signaler}/nouveau-signalement`,
         links: [
-          { labelKey: "personnelService.recrutement.recrutementMilitaire", href: `${sectionPaths.personnelService}/recrutement/recrutement-militaire` },
-          { labelKey: "personnelService.recrutement.recrutementCivil", href: `${sectionPaths.personnelService}/recrutement/recrutement-civil` },
-          { labelKey: "personnelService.recrutement.concours", href: `${sectionPaths.personnelService}/recrutement/concours` },
-          { labelKey: "personnelService.recrutement.commentPostuler", href: `${sectionPaths.personnelService}/recrutement/comment-postuler` },
+          { labelKey: "signaler.nouveauSignalement.signalerUnAppel", href: `${sectionPaths.signaler}/nouveau-signalement/signaler-un-appel` },
+          { labelKey: "signaler.nouveauSignalement.signalerUnSms", href: `${sectionPaths.signaler}/nouveau-signalement/signaler-un-sms` },
+          { labelKey: "signaler.nouveauSignalement.signalerUnNumero", href: `${sectionPaths.signaler}/nouveau-signalement/signaler-un-numero` },
+          { labelKey: "signaler.nouveauSignalement.informationsAFournir", href: `${sectionPaths.signaler}/nouveau-signalement/informations-a-fournir` },
         ],
       },
       {
-        labelKey: "personnelService.carrieresEtParcours.title",
-        href: `${sectionPaths.personnelService}/carrieres-et-parcours`,
+        labelKey: "signaler.mesSignalements.title",
+        href: `${sectionPaths.signaler}/mes-signalements`,
         links: [
-          { labelKey: "personnelService.carrieresEtParcours.statutDesMilitaires", href: `${sectionPaths.personnelService}/carrieres-et-parcours/statut-des-militaires` },
-          { labelKey: "personnelService.carrieresEtParcours.parcoursProfessionnels", href: `${sectionPaths.personnelService}/carrieres-et-parcours/parcours-professionnels` },
-          { labelKey: "personnelService.carrieresEtParcours.mobiliteEtAffectations", href: `${sectionPaths.personnelService}/carrieres-et-parcours/mobilite-et-affectations` },
-          { labelKey: "personnelService.carrieresEtParcours.soldesEtPensions", href: `${sectionPaths.personnelService}/carrieres-et-parcours/soldes-et-pensions` },
+          { labelKey: "signaler.mesSignalements.suivreUnSignalement", href: `${sectionPaths.signaler}/mes-signalements/suivre-un-signalement` },
+          { labelKey: "signaler.mesSignalements.historique", href: `${sectionPaths.signaler}/mes-signalements/historique` },
+          { labelKey: "signaler.mesSignalements.modifierUnSignalement", href: `${sectionPaths.signaler}/mes-signalements/modifier-un-signalement` },
+          { labelKey: "signaler.mesSignalements.supprimerUnSignalement", href: `${sectionPaths.signaler}/mes-signalements/supprimer-un-signalement` },
         ],
       },
       {
-        labelKey: "personnelService.formation.title",
-        href: `${sectionPaths.personnelService}/formation`,
+        labelKey: "signaler.informations.title",
+        href: `${sectionPaths.signaler}/informations`,
         links: [
-          { labelKey: "personnelService.formation.formationInitiale", href: `${sectionPaths.personnelService}/formation/formation-initiale` },
-          { labelKey: "personnelService.formation.formationContinue", href: `${sectionPaths.personnelService}/formation/formation-continue` },
-          { labelKey: "personnelService.formation.ecolesEtCentres", href: `${sectionPaths.personnelService}/formation/ecoles-et-centres` },
-          { labelKey: "personnelService.formation.certificationEtQualifications", href: `${sectionPaths.personnelService}/formation/certification-et-qualifications` },
+          { labelKey: "signaler.informations.questCeQuUnSignalement", href: `${sectionPaths.signaler}/informations/quest-ce-qu-un-signalement` },
+          { labelKey: "signaler.informations.quiPeutSignaler", href: `${sectionPaths.signaler}/informations/qui-peut-signaler` },
+          { labelKey: "signaler.informations.confidentialite", href: `${sectionPaths.signaler}/informations/confidentialite` },
+          { labelKey: "signaler.informations.signalementsEtDroits", href: `${sectionPaths.signaler}/informations/signalements-et-droits` },
         ],
       },
       {
-        labelKey: "personnelService.reserveEtAnciensMilitaires.title",
-        href: `${sectionPaths.personnelService}/reserve-et-anciens-militaires`,
+        labelKey: "signaler.suites.title",
+        href: `${sectionPaths.signaler}/suites`,
         links: [
-          { labelKey: "personnelService.reserveEtAnciensMilitaires.reserveOperationnelle", href: `${sectionPaths.personnelService}/reserve-et-anciens-militaires/reserve-operationnelle` },
-          { labelKey: "personnelService.reserveEtAnciensMilitaires.reserveCitoyenne", href: `${sectionPaths.personnelService}/reserve-et-anciens-militaires/reserve-citoyenne` },
-          { labelKey: "personnelService.reserveEtAnciensMilitaires.anciensMilitaires", href: `${sectionPaths.personnelService}/reserve-et-anciens-militaires/anciens-militaires` },
-          { labelKey: "personnelService.reserveEtAnciensMilitaires.accompagnementSocial", href: `${sectionPaths.personnelService}/reserve-et-anciens-militaires/accompagnement-social` },
+          { labelKey: "signaler.suites.traitementDesSignalements", href: `${sectionPaths.signaler}/suites/traitement-des-signalements` },
+          { labelKey: "signaler.suites.enquetesEtControles", href: `${sectionPaths.signaler}/suites/enquetes-et-controles` },
+          { labelKey: "signaler.suites.sanctions", href: `${sectionPaths.signaler}/suites/sanctions` },
+          { labelKey: "signaler.suites.resultats", href: `${sectionPaths.signaler}/suites/resultats` },
         ],
       },
     ],
   },
   {
     type: "megaMenu",
-    labelKey: "capacitesIndustrie",
-    href: sectionPaths.capacitesIndustrie,
+    labelKey: "professionnels",
+    href: sectionPaths.professionnels,
     leader: {
-      titleKey: "capacitesIndustrie.title",
-      paragraphKey: "capacitesIndustrie.text",
+      titleKey: "professionnels.title",
+      paragraphKey: "professionnels.text",
       link: {
-        labelKey: "capacitesIndustrie.allLink",
-        href: sectionPaths.capacitesIndustrie,
+        labelKey: "professionnels.allLink",
+        href: sectionPaths.professionnels,
       },
     },
     primaryItems: [
       {
-        labelKey: "capacitesIndustrie.equipementsEtArmement.title",
-        href: `${sectionPaths.capacitesIndustrie}/equipements-et-armement`,
+        labelKey: "professionnels.monEntreprise.title",
+        href: `${sectionPaths.professionnels}/mon-entreprise`,
         links: [
-          { labelKey: "capacitesIndustrie.equipementsEtArmement.equipementsDesForces", href: `${sectionPaths.capacitesIndustrie}/equipements-et-armement/equipements-des-forces` },
-          { labelKey: "capacitesIndustrie.equipementsEtArmement.armement", href: `${sectionPaths.capacitesIndustrie}/equipements-et-armement/armement` },
-          { labelKey: "capacitesIndustrie.equipementsEtArmement.maintienEnCondition", href: `${sectionPaths.capacitesIndustrie}/equipements-et-armement/maintien-en-condition` },
-          { labelKey: "capacitesIndustrie.equipementsEtArmement.modernisation", href: `${sectionPaths.capacitesIndustrie}/equipements-et-armement/modernisation` },
+          { labelKey: "professionnels.monEntreprise.espaceProfessionnel", href: `${sectionPaths.professionnels}/mon-entreprise/espace-professionnel` },
+          { labelKey: "professionnels.monEntreprise.declarerMonActivite", href: `${sectionPaths.professionnels}/mon-entreprise/declarer-mon-activite` },
+          { labelKey: "professionnels.monEntreprise.gererMesAcces", href: `${sectionPaths.professionnels}/mon-entreprise/gerer-mes-acces` },
+          { labelKey: "professionnels.monEntreprise.conformite", href: `${sectionPaths.professionnels}/mon-entreprise/conformite` },
         ],
       },
       {
-        labelKey: "capacitesIndustrie.programmesEtAcquisitions.title",
-        href: `${sectionPaths.capacitesIndustrie}/programmes-et-acquisitions`,
+        labelKey: "professionnels.verifier.title",
+        href: `${sectionPaths.professionnels}/verifier`,
         links: [
-          { labelKey: "capacitesIndustrie.programmesEtAcquisitions.programmesDarmement", href: `${sectionPaths.capacitesIndustrie}/programmes-et-acquisitions/programmes-d-armement` },
-          { labelKey: "capacitesIndustrie.programmesEtAcquisitions.equipementsFuturs", href: `${sectionPaths.capacitesIndustrie}/programmes-et-acquisitions/equipements-futurs` },
-          { labelKey: "capacitesIndustrie.programmesEtAcquisitions.commandesEtLivraisons", href: `${sectionPaths.capacitesIndustrie}/programmes-et-acquisitions/commandes-et-livraisons` },
-          { labelKey: "capacitesIndustrie.programmesEtAcquisitions.cooperationDarmement", href: `${sectionPaths.capacitesIndustrie}/programmes-et-acquisitions/cooperation-d-armement` },
+          { labelKey: "professionnels.verifier.consulterLaListe", href: `${sectionPaths.professionnels}/verifier/consulter-la-liste` },
+          { labelKey: "professionnels.verifier.interrogerUnNumero", href: `${sectionPaths.professionnels}/verifier/interroger-un-numero` },
+          { labelKey: "professionnels.verifier.miseAJourDesDonnees", href: `${sectionPaths.professionnels}/verifier/mise-a-jour-des-donnees` },
+          { labelKey: "professionnels.verifier.tracabiliteDesConsultations", href: `${sectionPaths.professionnels}/verifier/tracabilite-des-consultations` },
         ],
       },
       {
-        labelKey: "capacitesIndustrie.industrieDeDefense.title",
-        href: `${sectionPaths.capacitesIndustrie}/industrie-de-defense`,
+        labelKey: "professionnels.consentements.title",
+        href: `${sectionPaths.professionnels}/consentements`,
         links: [
-          { labelKey: "capacitesIndustrie.industrieDeDefense.filiereIndustrielle", href: `${sectionPaths.capacitesIndustrie}/industrie-de-defense/filiere-industrielle` },
-          { labelKey: "capacitesIndustrie.industrieDeDefense.entreprisesEtPme", href: `${sectionPaths.capacitesIndustrie}/industrie-de-defense/entreprises-et-pme` },
-          { labelKey: "capacitesIndustrie.industrieDeDefense.exportationsDeDefense", href: `${sectionPaths.capacitesIndustrie}/industrie-de-defense/exportations-de-defense` },
-          { labelKey: "capacitesIndustrie.industrieDeDefense.souveraineteIndustrielle", href: `${sectionPaths.capacitesIndustrie}/industrie-de-defense/souverainete-industrielle` },
+          { labelKey: "professionnels.consentements.recueillirLeConsentement", href: `${sectionPaths.professionnels}/consentements/recueillir-le-consentement` },
+          { labelKey: "professionnels.consentements.prouverLeConsentement", href: `${sectionPaths.professionnels}/consentements/prouver-le-consentement` },
+          { labelKey: "professionnels.consentements.dureeDeValidite", href: `${sectionPaths.professionnels}/consentements/duree-de-validite` },
+          { labelKey: "professionnels.consentements.exceptions", href: `${sectionPaths.professionnels}/consentements/exceptions` },
         ],
       },
       {
-        labelKey: "capacitesIndustrie.rechercheEtInnovation.title",
-        href: `${sectionPaths.capacitesIndustrie}/recherche-et-innovation`,
+        labelKey: "professionnels.campagnes.title",
+        href: `${sectionPaths.professionnels}/campagnes`,
         links: [
-          { labelKey: "capacitesIndustrie.rechercheEtInnovation.rechercheDeDefense", href: `${sectionPaths.capacitesIndustrie}/recherche-et-innovation/recherche-de-defense` },
-          { labelKey: "capacitesIndustrie.rechercheEtInnovation.innovation", href: `${sectionPaths.capacitesIndustrie}/recherche-et-innovation/innovation` },
-          { labelKey: "capacitesIndustrie.rechercheEtInnovation.technologiesEmergentes", href: `${sectionPaths.capacitesIndustrie}/recherche-et-innovation/technologies-emergentes` },
-          { labelKey: "capacitesIndustrie.rechercheEtInnovation.agencesEtOperateurs", href: `${sectionPaths.capacitesIndustrie}/recherche-et-innovation/agences-et-operateurs` },
+          { labelKey: "professionnels.campagnes.preparerUneCampagne", href: `${sectionPaths.professionnels}/campagnes/preparer-une-campagne` },
+          { labelKey: "professionnels.campagnes.fichiersDAppel", href: `${sectionPaths.professionnels}/campagnes/fichiers-d-appel` },
+          { labelKey: "professionnels.campagnes.controlerLesListes", href: `${sectionPaths.professionnels}/campagnes/controler-les-listes` },
+          { labelKey: "professionnels.campagnes.bonnesPratiques", href: `${sectionPaths.professionnels}/campagnes/bonnes-pratiques` },
         ],
       },
     ],
   },
   {
     type: "megaMenu",
-    labelKey: "leMinistere",
-    href: sectionPaths.leMinistere,
+    labelKey: "reglementation",
+    href: sectionPaths.reglementation,
     leader: {
-      titleKey: "leMinistere.title",
-      paragraphKey: "leMinistere.text",
-      link: { labelKey: "leMinistere.allLink", href: sectionPaths.leMinistere },
+      titleKey: "reglementation.title",
+      paragraphKey: "reglementation.text",
+      link: {
+        labelKey: "reglementation.allLink",
+        href: sectionPaths.reglementation,
+      },
     },
     primaryItems: [
       {
-        labelKey: "leMinistere.institution.title",
-        href: `${sectionPaths.leMinistere}/institution`,
+        labelKey: "reglementation.cadreLegal.title",
+        href: `${sectionPaths.reglementation}/cadre-legal`,
         links: [
-          { labelKey: "leMinistere.institution.leMinistre", href: `${sectionPaths.leMinistere}/institution/le-ministre` },
-          { labelKey: "leMinistere.institution.missions", href: `${sectionPaths.leMinistere}/institution/missions` },
-          { labelKey: "leMinistere.institution.organisation", href: `${sectionPaths.leMinistere}/institution/organisation` },
-          { labelKey: "leMinistere.institution.organigramme", href: `${sectionPaths.leMinistere}/institution/organigramme` },
+          { labelKey: "reglementation.cadreLegal.textesDeReference", href: `${sectionPaths.reglementation}/cadre-legal/textes-de-reference` },
+          { labelKey: "reglementation.cadreLegal.loiEtDecrets", href: `${sectionPaths.reglementation}/cadre-legal/loi-et-decrets` },
+          { labelKey: "reglementation.cadreLegal.codeDeLaConsommation", href: `${sectionPaths.reglementation}/cadre-legal/code-de-la-consommation` },
+          { labelKey: "reglementation.cadreLegal.jurisprudence", href: `${sectionPaths.reglementation}/cadre-legal/jurisprudence` },
         ],
       },
       {
-        labelKey: "leMinistere.administration.title",
-        href: `${sectionPaths.leMinistere}/administration`,
+        labelKey: "reglementation.obligations.title",
+        href: `${sectionPaths.reglementation}/obligations`,
         links: [
-          { labelKey: "leMinistere.administration.servicesDuMinistere", href: `${sectionPaths.leMinistere}/administration/services-du-ministere` },
-          { labelKey: "leMinistere.administration.administrationCentrale", href: `${sectionPaths.leMinistere}/administration/administration-centrale` },
-          { labelKey: "leMinistere.administration.servicesDeconcentres", href: `${sectionPaths.leMinistere}/administration/services-deconcentres` },
-          { labelKey: "leMinistere.administration.etablissementsPublics", href: `${sectionPaths.leMinistere}/administration/etablissements-publics` },
+          { labelKey: "reglementation.obligations.consultationObligatoire", href: `${sectionPaths.reglementation}/obligations/consultation-obligatoire` },
+          { labelKey: "reglementation.obligations.informationDesConsommateurs", href: `${sectionPaths.reglementation}/obligations/information-des-consommateurs` },
+          { labelKey: "reglementation.obligations.obligationsDesOperateurs", href: `${sectionPaths.reglementation}/obligations/obligations-des-operateurs` },
+          { labelKey: "reglementation.obligations.obligationsDesPlateformes", href: `${sectionPaths.reglementation}/obligations/obligations-des-plateformes` },
         ],
       },
       {
-        labelKey: "leMinistere.budgetEtTransparence.title",
-        href: `${sectionPaths.leMinistere}/budget-et-transparence`,
+        labelKey: "reglementation.restrictions.title",
+        href: `${sectionPaths.reglementation}/restrictions`,
         links: [
-          { labelKey: "leMinistere.budgetEtTransparence.budgetDeLaDefense", href: `${sectionPaths.leMinistere}/budget-et-transparence/budget-de-la-defense` },
-          { labelKey: "leMinistere.budgetEtTransparence.rapportsDActivite", href: `${sectionPaths.leMinistere}/budget-et-transparence/rapports-d-activite` },
-          { labelKey: "leMinistere.budgetEtTransparence.donneesPubliques", href: `${sectionPaths.leMinistere}/budget-et-transparence/donnees-publiques` },
-          { labelKey: "leMinistere.budgetEtTransparence.marchesPublics", href: `${sectionPaths.leMinistere}/budget-et-transparence/marches-publics` },
+          { labelKey: "reglementation.restrictions.horairesDAppel", href: `${sectionPaths.reglementation}/restrictions/horaires-d-appel` },
+          { labelKey: "reglementation.restrictions.joursEtPeriodes", href: `${sectionPaths.reglementation}/restrictions/jours-et-periodes` },
+          { labelKey: "reglementation.restrictions.numerosInterdits", href: `${sectionPaths.reglementation}/restrictions/numeros-interdits` },
+          { labelKey: "reglementation.restrictions.secteursReglementes", href: `${sectionPaths.reglementation}/restrictions/secteurs-reglementes` },
         ],
       },
       {
-        labelKey: "leMinistere.actualitesEtContact.title",
-        href: `${sectionPaths.leMinistere}/actualites-et-contact`,
+        labelKey: "reglementation.controles.title",
+        href: `${sectionPaths.reglementation}/controles`,
         links: [
-          { labelKey: "leMinistere.actualitesEtContact.actualites", href: `${sectionPaths.leMinistere}/actualites-et-contact/actualites` },
-          { labelKey: "leMinistere.actualitesEtContact.communiques", href: `${sectionPaths.leMinistere}/actualites-et-contact/communiques` },
-          { labelKey: "leMinistere.actualitesEtContact.publications", href: `${sectionPaths.leMinistere}/actualites-et-contact/publications` },
-          { labelKey: "leMinistere.actualitesEtContact.contact", href: `${sectionPaths.leMinistere}/actualites-et-contact/contact` },
+          { labelKey: "reglementation.controles.autoriteDeControle", href: `${sectionPaths.reglementation}/controles/autorite-de-controle` },
+          { labelKey: "reglementation.controles.proceduresDeControle", href: `${sectionPaths.reglementation}/controles/procedures-de-controle` },
+          { labelKey: "reglementation.controles.controlesEtSignalements", href: `${sectionPaths.reglementation}/controles/controles-et-signalements` },
+          { labelKey: "reglementation.controles.resultatsDesControles", href: `${sectionPaths.reglementation}/controles/resultats-des-controles` },
+        ],
+      },
+    ],
+  },
+  {
+    type: "megaMenu",
+    labelKey: "services",
+    href: sectionPaths.services,
+    leader: {
+      titleKey: "services.title",
+      paragraphKey: "services.text",
+      link: { labelKey: "services.allLink", href: sectionPaths.services },
+    },
+    primaryItems: [
+      {
+        labelKey: "services.portailCitoyen.title",
+        href: `${sectionPaths.services}/portail-citoyen`,
+        links: [
+          { labelKey: "services.portailCitoyen.mInscrire", href: `${sectionPaths.services}/portail-citoyen/m-inscrire` },
+          { labelKey: "services.portailCitoyen.signalerUnAppel", href: `${sectionPaths.services}/portail-citoyen/signaler-un-appel` },
+          { labelKey: "services.portailCitoyen.monEspace", href: `${sectionPaths.services}/portail-citoyen/mon-espace` },
+          { labelKey: "services.portailCitoyen.aideEnLigne", href: `${sectionPaths.services}/portail-citoyen/aide-en-ligne` },
+        ],
+      },
+      {
+        labelKey: "services.portailProfessionnel.title",
+        href: `${sectionPaths.services}/portail-professionnel`,
+        links: [
+          { labelKey: "services.portailProfessionnel.seConnecter", href: `${sectionPaths.services}/portail-professionnel/se-connecter` },
+          { labelKey: "services.portailProfessionnel.interrogerLaListe", href: `${sectionPaths.services}/portail-professionnel/interroger-la-liste` },
+          { labelKey: "services.portailProfessionnel.abonnements", href: `${sectionPaths.services}/portail-professionnel/abonnements` },
+          { labelKey: "services.portailProfessionnel.support", href: `${sectionPaths.services}/portail-professionnel/support` },
+        ],
+      },
+      {
+        labelKey: "services.developpeurs.title",
+        href: `${sectionPaths.services}/developpeurs`,
+        links: [
+          { labelKey: "services.developpeurs.apiBloctel", href: `${sectionPaths.services}/developpeurs/api-bloctel` },
+          { labelKey: "services.developpeurs.documentation", href: `${sectionPaths.services}/developpeurs/documentation` },
+          { labelKey: "services.developpeurs.guidesTechniques", href: `${sectionPaths.services}/developpeurs/guides-techniques` },
+          { labelKey: "services.developpeurs.statutDuService", href: `${sectionPaths.services}/developpeurs/statut-du-service` },
+        ],
+      },
+      {
+        labelKey: "services.donneesPubliques.title",
+        href: `${sectionPaths.services}/donnees-publiques`,
+        links: [
+          { labelKey: "services.donneesPubliques.statistiques", href: `${sectionPaths.services}/donnees-publiques/statistiques` },
+          { labelKey: "services.donneesPubliques.jeuxDeDonnees", href: `${sectionPaths.services}/donnees-publiques/jeux-de-donnees` },
+          { labelKey: "services.donneesPubliques.rapports", href: `${sectionPaths.services}/donnees-publiques/rapports` },
+          { labelKey: "services.donneesPubliques.openData", href: `${sectionPaths.services}/donnees-publiques/open-data` },
+        ],
+      },
+    ],
+  },
+  {
+    type: "megaMenu",
+    labelKey: "aide",
+    href: sectionPaths.aide,
+    leader: {
+      titleKey: "aide.title",
+      paragraphKey: "aide.text",
+      link: { labelKey: "aide.allLink", href: sectionPaths.aide },
+    },
+    primaryItems: [
+      {
+        labelKey: "aide.questionsFrequentes.title",
+        href: `${sectionPaths.aide}/questions-frequentes`,
+        links: [
+          { labelKey: "aide.questionsFrequentes.inscription", href: `${sectionPaths.aide}/questions-frequentes/inscription` },
+          { labelKey: "aide.questionsFrequentes.signalement", href: `${sectionPaths.aide}/questions-frequentes/signalement` },
+          { labelKey: "aide.questionsFrequentes.droits", href: `${sectionPaths.aide}/questions-frequentes/droits` },
+          { labelKey: "aide.questionsFrequentes.professionnels", href: `${sectionPaths.aide}/questions-frequentes/professionnels` },
+        ],
+      },
+      {
+        labelKey: "aide.guides.title",
+        href: `${sectionPaths.aide}/guides`,
+        links: [
+          { labelKey: "aide.guides.guideDuCitoyen", href: `${sectionPaths.aide}/guides/guide-du-citoyen` },
+          { labelKey: "aide.guides.guideDuProfessionnel", href: `${sectionPaths.aide}/guides/guide-du-professionnel` },
+          { labelKey: "aide.guides.tutoriels", href: `${sectionPaths.aide}/guides/tutoriels` },
+          { labelKey: "aide.guides.fichesPratiques", href: `${sectionPaths.aide}/guides/fiches-pratiques` },
+        ],
+      },
+      {
+        labelKey: "aide.assistance.title",
+        href: `${sectionPaths.aide}/assistance`,
+        links: [
+          { labelKey: "aide.assistance.contacterLAssistance", href: `${sectionPaths.aide}/assistance/contacter-l-assistance` },
+          { labelKey: "aide.assistance.formulaireDeContact", href: `${sectionPaths.aide}/assistance/formulaire-de-contact` },
+          { labelKey: "aide.assistance.numeroDAide", href: `${sectionPaths.aide}/assistance/numero-d-aide` },
+          { labelKey: "aide.assistance.horaires", href: `${sectionPaths.aide}/assistance/horaires` },
+        ],
+      },
+      {
+        labelKey: "aide.aPropos.title",
+        href: `${sectionPaths.aide}/a-propos`,
+        links: [
+          { labelKey: "aide.aPropos.questCeQueBloctel", href: `${sectionPaths.aide}/a-propos/quest-ce-que-bloctel` },
+          { labelKey: "aide.aPropos.missions", href: `${sectionPaths.aide}/a-propos/missions` },
+          { labelKey: "aide.aPropos.quiSommesNous", href: `${sectionPaths.aide}/a-propos/qui-sommes-nous` },
+          { labelKey: "aide.aPropos.contact", href: `${sectionPaths.aide}/a-propos/contact` },
         ],
       },
     ],

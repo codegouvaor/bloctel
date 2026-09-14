@@ -7,7 +7,7 @@ import { legalPaths, pageAnchors } from "@/lib/site-structure";
 const HOME_PATH = "/";
 
 /** Official portal domains of the Republic of Astoria, shown in the footer. */
-const OFFICIAL_DOMAINS: string[] = ["info.gouv.aor", "justice.gouv.aor", "data.gouv.aor", "mil.gouv.aor"];
+const OFFICIAL_DOMAINS: string[] = ["info.gouv.aor", "code.gouv.aor", "data.gouv.aor", "infra.gouv.aor"];
 
 /**
  * Government Footer of the Astoria portal — secondary navigation zone of the

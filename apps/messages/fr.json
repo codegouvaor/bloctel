@@ -1,0 +1,984 @@
+{
+  "brand": {
+    "republicName": "Bloctel"
+  },
+  "meta": {
+    "searchPlaceholder": "Rechercher sur le portail Bloctel…",
+    "defaultTitle": "Bloctel",
+    "suffix": "Bloctel",
+    "description": "Portail officiel de Bloctel, le service national de gestion du démarchage téléphonique non désiré : inscription au registre d'opposition, signalement d'un démarchage abusif, droits des consommateurs et obligations des professionnels."
+  },
+  "header": {
+    "serviceTitle": "Bloctel",
+    "serviceTagline": "Le service national de lutte contre le démarchage téléphonique non désiré",
+    "homeTitle": "Accueil du portail Bloctel",
+    "myGouv": "Se connecter",
+    "signIn": "Se connecter",
+    "accountLabel": "Mon compte",
+    "logoutLink": "Se déconnecter",
+    "account": {
+      "profile": "Mon profil",
+      "settings": "Paramètres du compte"
+    }
+  },
+  "nav": {
+    "primary": {
+      "mesDroits": "Mes droits",
+      "maProtection": "Ma protection",
+      "signaler": "Signaler",
+      "professionnels": "Professionnels",
+      "reglementation": "Réglementation",
+      "services": "Services",
+      "aide": "Aide"
+    },
+    "panel": {
+      "mesDroits": {
+        "title": "Mes droits",
+        "text": "Comprendre le démarchage téléphonique et les droits qui vous protègent.",
+        "allLink": "Tout sur mes droits",
+        "demarchage": {
+          "title": "Démarchage",
+          "questCeQueLeDemarchage": "Qu'est-ce que le démarchage téléphonique ?",
+          "demarchageAutorise": "Démarchage autorisé",
+          "demarchageInterdit": "Démarchage interdit",
+          "reconnaitreUnAppelAbusif": "Reconnaître un appel abusif"
+        },
+        "vosDroits": {
+          "title": "Vos droits",
+          "droitOpposition": "Droit d'opposition",
+          "protectionDesConsommateurs": "Protection des consommateurs",
+          "donneesPersonnelles": "Données personnelles",
+          "recoursEtReclamations": "Recours et réclamations"
+        },
+        "situations": {
+          "title": "Situations",
+          "particuliers": "Particuliers",
+          "numerosMobiles": "Numéros mobiles",
+          "numerosProfessionnels": "Numéros professionnels",
+          "casParticuliers": "Cas particuliers"
+        },
+        "comprendre": {
+          "title": "Comprendre",
+          "fonctionnementDeBloctel": "Fonctionnement de Bloctel",
+          "acteursDuDispositif": "Acteurs du dispositif",
+          "chiffresCles": "Chiffres clés",
+          "questionsSurLeDemarchage": "Questions sur le démarchage"
+        }
+      },
+      "maProtection": {
+        "title": "Ma protection",
+        "text": "Gérer mon inscription au registre d'opposition et mes préférences de contact.",
+        "allLink": "Tout sur ma protection",
+        "monRegistre": {
+          "title": "Mon registre",
+          "mInscrire": "M'inscrire",
+          "verifierMonInscription": "Vérifier mon inscription",
+          "renouvelerMonInscription": "Renouveler mon inscription",
+          "meDesinscrire": "Me désinscrire"
+        },
+        "coordonnees": {
+          "title": "Coordonnées",
+          "ajouterUnNumero": "Ajouter un numéro",
+          "modifierUnNumero": "Modifier un numéro",
+          "supprimerUnNumero": "Supprimer un numéro",
+          "numerosEtLignes": "Numéros et lignes"
+        },
+        "preferences": {
+          "title": "Préférences",
+          "canauxDeContact": "Canaux de contact",
+          "typesDAppels": "Types d'appels",
+          "horairesEtFrequence": "Horaires et fréquence",
+          "notifications": "Notifications"
+        },
+        "consentements": {
+          "title": "Consentements",
+          "consentementCommercial": "Consentement commercial",
+          "retirerMonConsentement": "Retirer mon consentement",
+          "consentementDesTiers": "Consentement des tiers",
+          "gererMesConsentements": "Gérer mes consentements"
+        }
+      },
+      "signaler": {
+        "title": "Signaler",
+        "text": "Déclarer un démarchage abusif et suivre le traitement de mon signalement.",
+        "allLink": "Tout sur le signalement",
+        "nouveauSignalement": {
+          "title": "Nouveau signalement",
+          "signalerUnAppel": "Signaler un appel",
+          "signalerUnSms": "Signaler un SMS",
+          "signalerUnNumero": "Signaler un numéro",
+          "informationsAFournir": "Informations à fournir"
+        },
+        "mesSignalements": {
+          "title": "Mes signalements",
+          "suivreUnSignalement": "Suivre un signalement",
+          "historique": "Historique",
+          "modifierUnSignalement": "Modifier un signalement",
+          "supprimerUnSignalement": "Supprimer un signalement"
+        },
+        "informations": {
+          "title": "Informations",
+          "questCeQuUnSignalement": "Qu'est-ce qu'un signalement ?",
+          "quiPeutSignaler": "Qui peut signaler ?",
+          "confidentialite": "Confidentialité",
+          "signalementsEtDroits": "Signalements et droits"
+        },
+        "suites": {
+          "title": "Suites",
+          "traitementDesSignalements": "Traitement des signalements",
+          "enquetesEtControles": "Enquêtes et contrôles",
+          "sanctions": "Sanctions",
+          "resultats": "Résultats"
+        }
+      },
+      "professionnels": {
+        "title": "Professionnels",
+        "text": "Se mettre en conformité et consulter la liste d'opposition au démarchage.",
+        "allLink": "Tout pour les professionnels",
+        "monEntreprise": {
+          "title": "Mon entreprise",
+          "espaceProfessionnel": "Espace professionnel",
+          "declarerMonActivite": "Déclarer mon activité",
+          "gererMesAcces": "Gérer mes accès",
+          "conformite": "Conformité"
+        },
+        "verifier": {
+          "title": "Vérifier",
+          "consulterLaListe": "Consulter la liste",
+          "interrogerUnNumero": "Interroger un numéro",
+          "miseAJourDesDonnees": "Mise à jour des données",
+          "tracabiliteDesConsultations": "Traçabilité des consultations"
+        },
+        "consentements": {
+          "title": "Consentements",
+          "recueillirLeConsentement": "Recueillir le consentement",
+          "prouverLeConsentement": "Prouver le consentement",
+          "dureeDeValidite": "Durée de validité",
+          "exceptions": "Exceptions"
+        },
+        "campagnes": {
+          "title": "Campagnes",
+          "preparerUneCampagne": "Préparer une campagne",
+          "fichiersDAppel": "Fichiers d'appel",
+          "controlerLesListes": "Contrôler les listes",
+          "bonnesPratiques": "Bonnes pratiques"
+        }
+      },
+      "reglementation": {
+        "title": "Réglementation",
+        "text": "Le cadre légal, les obligations et les contrôles du démarchage téléphonique.",
+        "allLink": "Toute la réglementation",
+        "cadreLegal": {
+          "title": "Cadre légal",
+          "textesDeReference": "Textes de référence",
+          "loiEtDecrets": "Loi et décrets",
+          "codeDeLaConsommation": "Code de la consommation",
+          "jurisprudence": "Jurisprudence"
+        },
+        "obligations": {
+          "title": "Obligations",
+          "consultationObligatoire": "Consultation obligatoire",
+          "informationDesConsommateurs": "Information des consommateurs",
+          "obligationsDesOperateurs": "Obligations des opérateurs",
+          "obligationsDesPlateformes": "Obligations des plateformes"
+        },
+        "restrictions": {
+          "title": "Restrictions",
+          "horairesDAppel": "Horaires d'appel",
+          "joursEtPeriodes": "Jours et périodes",
+          "numerosInterdits": "Numéros interdits",
+          "secteursReglementes": "Secteurs réglementés"
+        },
+        "controles": {
+          "title": "Contrôles",
+          "autoriteDeControle": "Autorité de contrôle",
+          "proceduresDeControle": "Procédures de contrôle",
+          "controlesEtSignalements": "Contrôles et signalements",
+          "resultatsDesControles": "Résultats des contrôles"
+        }
+      },
+      "services": {
+        "title": "Services",
+        "text": "Accéder aux portails citoyen et professionnel et aux données publiques.",
+        "allLink": "Tous les services",
+        "portailCitoyen": {
+          "title": "Portail citoyen",
+          "mInscrire": "M'inscrire",
+          "signalerUnAppel": "Signaler un appel",
+          "monEspace": "Mon espace",
+          "aideEnLigne": "Aide en ligne"
+        },
+        "portailProfessionnel": {
+          "title": "Portail professionnel",
+          "seConnecter": "Se connecter",
+          "interrogerLaListe": "Interroger la liste",
+          "abonnements": "Abonnements",
+          "support": "Support"
+        },
+        "developpeurs": {
+          "title": "Développeurs",
+          "apiBloctel": "API Bloctel",
+          "documentation": "Documentation",
+          "guidesTechniques": "Guides techniques",
+          "statutDuService": "Statut du service"
+        },
+        "donneesPubliques": {
+          "title": "Données publiques",
+          "statistiques": "Statistiques",
+          "jeuxDeDonnees": "Jeux de données",
+          "rapports": "Rapports",
+          "openData": "Open data"
+        }
+      },
+      "aide": {
+        "title": "Aide",
+        "text": "Trouver une réponse, un guide ou contacter l'assistance.",
+        "allLink": "Toute l'aide",
+        "questionsFrequentes": {
+          "title": "Questions fréquentes",
+          "inscription": "Inscription",
+          "signalement": "Signalement",
+          "droits": "Droits",
+          "professionnels": "Professionnels"
+        },
+        "guides": {
+          "title": "Guides",
+          "guideDuCitoyen": "Guide du citoyen",
+          "guideDuProfessionnel": "Guide du professionnel",
+          "tutoriels": "Tutoriels",
+          "fichesPratiques": "Fiches pratiques"
+        },
+        "assistance": {
+          "title": "Assistance",
+          "contacterLAssistance": "Contacter l'assistance",
+          "formulaireDeContact": "Formulaire de contact",
+          "numeroDAide": "Numéro d'aide",
+          "horaires": "Horaires"
+        },
+        "aPropos": {
+          "title": "À propos",
+          "questCeQueBloctel": "Qu'est-ce que Bloctel ?",
+          "missions": "Missions",
+          "quiSommesNous": "Qui sommes-nous",
+          "contact": "Contact"
+        }
+      }
+    }
+  },
+  "footer": {
+    "contentDescription": "Bloctel est le service national qui permet aux consommateurs de s'opposer au démarchage téléphonique non désiré et de signaler les appels abusifs.",
+    "bottom": {
+      "contact": "Contact",
+      "planDuPortail": "Plan du portail",
+      "documentsOpposables": "Documents opposables",
+      "privacy": "Confidentialité",
+      "cookies": "Gestion des cookies",
+      "publications": "Publications officielles"
+    },
+    "license": "Sauf mention contraire, tous les contenus de ce site sont disponibles sous <link>licence APSL</link>.",
+    "columns": {
+      "mesDroits": {
+        "title": "Mes droits"
+      },
+      "maProtection": {
+        "title": "Ma protection"
+      },
+      "signaler": {
+        "title": "Signaler"
+      },
+      "professionnels": {
+        "title": "Professionnels"
+      },
+      "reglementation": {
+        "title": "Réglementation"
+      },
+      "services": {
+        "title": "Services"
+      },
+      "aide": {
+        "title": "Aide"
+      }
+    }
+  },
+  "common": {
+    "skipToContent": "Aller au contenu",
+    "skipToFooter": "Aller au pied de page",
+    "backToTop": {
+      "ariaLabel": "Revenir en haut de page"
+    },
+    "cookiePopup": {
+      "ariaLabel": "Bandeau de gestion des cookies",
+      "title": "Respect de votre vie privée",
+      "message": "Nous utilisons des cookies pour améliorer votre expérience de navigation, mesurer l'audience et garantir la sécurité du portail. Vous pouvez les accepter ou les refuser.",
+      "accept": "Tout accepter",
+      "decline": "Tout refuser",
+      "manage": "Gérer mes choix"
+    }
+  },
+  "pages": {
+    "contact": {
+      "meta": {
+        "title": "Contact",
+        "description": "Contacter la Bloctel : formulaire de contact, coordonnées et horaires d'ouverture."
+      },
+      "hero": {
+        "kicker": "Contact",
+        "title": "Contacter la Bloctel",
+        "lead": "Une question sur la monnaie, la politique monétaire, les établissements bancaires ou les services de la Banque centrale ? Votre message sera transmis au service compétent."
+      },
+      "formSection": {
+        "kicker": "Formulaire",
+        "title": "Écrivez-nous",
+        "lead": "Renseignez le formulaire ci-dessous : un courriel pré-rempli sera ouvert dans votre messagerie. Aucune donnée n'est enregistrée sur le portail."
+      },
+      "form": {
+        "requiredField": "Ce champ est obligatoire.",
+        "invalidEmail": "Veuillez saisir une adresse e-mail valide.",
+        "recipientLabel": "Destinataire",
+        "selectRecipient": "Choisir un destinataire",
+        "presidency": "Présidence de la Banque centrale",
+        "nameLabel": "Nom et prénom",
+        "namePlaceholder": "Votre nom et prénom",
+        "emailFieldLabel": "Adresse électronique",
+        "emailPlaceholder": "prenom.nom@exemple.aor",
+        "subjectLabel": "Objet",
+        "subjectPlaceholder": "L'objet de votre message",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Votre message…",
+        "sendButton": "Envoyer le message"
+      },
+      "recipients": {
+        "presidence": "Présidence de la Banque centrale",
+        "communications": "Direction de la communication",
+        "presse": "Service de presse",
+        "monnaie": "Direction des billets et de la monnaie",
+        "etablissements": "Direction des établissements bancaires"
+      },
+      "channels": {
+        "kicker": "Coordonnées",
+        "title": "Autres moyens de nous joindre",
+        "lead": "Le formulaire est le canal recommandé pour les demandes écrites. Vous pouvez également joindre la Banque centrale aux coordonnées suivantes.",
+        "facts": {
+          "email": {
+            "label": "Courriel",
+            "value": "contact@bca.astoria-gouv.org"
+          },
+          "phone": {
+            "label": "Téléphone",
+            "value": "+33 (0)1 00 00 00 00"
+          },
+          "address": {
+            "label": "Adresse",
+            "value": "1 place de la Monnaie, 75001 Astoria"
+          },
+          "hours": {
+            "label": "Horaires",
+            "value": "Du lundi au vendredi, de 9h à 17h"
+          }
+        }
+      }
+    },
+    "legal": {
+      "meta": {
+        "title": "Informations légales",
+        "description": "Les informations légales du portail de la Bloctel : conditions générales d'utilisation, confidentialité, accessibilité et gestion des cookies."
+      },
+      "related": {
+        "title": "Autres pages d'information",
+        "kicker": "Informations légales",
+        "accessibility": {
+          "label": "Accessibilité",
+          "desc": "Le niveau d'accessibilité du portail et la déclaration correspondante."
+        },
+        "privacy": {
+          "label": "Confidentialité",
+          "desc": "Les données personnelles traitées par le portail et les droits qui en découlent."
+        },
+        "terms": {
+          "label": "Conditions générales d'utilisation",
+          "desc": "Les règles d'utilisation du portail de la Bloctel."
+        },
+        "cookies": {
+          "label": "Gestion des cookies",
+          "desc": "Les cookies déposés par le portail et la façon de les gérer."
+        },
+        "sitemap": {
+          "label": "Plan du portail",
+          "desc": "L'ensemble des pages du portail, organisé par thème."
+        }
+      },
+      "landing": {
+        "hero": {
+          "kicker": "Informations légales",
+          "title": "Informations légales",
+          "lead": "Les documents d'information du portail de la Bloctel : conditions générales d'utilisation, politique de confidentialité, déclaration d'accessibilité et gestion des cookies.",
+          "notice": "Documents de démonstration : le portail est en cours de construction."
+        }
+      },
+      "accessibility": {
+        "meta": {
+          "title": "Accessibilité",
+          "description": "La déclaration d'accessibilité du portail de la Bloctel."
+        },
+        "hero": {
+          "kicker": "Informations légales",
+          "title": "Déclaration d'accessibilité",
+          "lead": "La Bloctel s'engage à rendre son portail accessible, conformément à la loi du 8 juillet 2019. Cette déclaration s'applique au portail de la Bloctel.",
+          "notice": "Dernière mise à jour : 12 septembre 2026."
+        },
+        "sections": {
+          "declaration": {
+            "kicker": "Engagement",
+            "title": "Notre engagement",
+            "lead": "La Bloctel est engagée dans une démarche d'accessibilité numérique afin de rendre son portail utilisable par toutes et tous, quels que soient le handicap, l'équipement ou la connexion.",
+            "paragraphs": {
+              "p1": "L'accessibilité numérique consiste à rendre les contenus et services accessibles à tous, en particulier aux personnes en situation de handicap. Elle est un enjeu d'égalité des chances et un engagement de service public.",
+              "p2": "Le portail de la Bloctel est construit selon le référentiel général d'amélioration de l'accessibilité (RGAA), afin d'offrir une expérience de navigation cohérente à tous ses visiteurs."
+            }
+          },
+          "conformite": {
+            "kicker": "Conformité",
+            "title": "État de conformité",
+            "lead": "Le portail de la Bloctel est partiellement conforme au référentiel général d'amélioration de l'accessibilité (RGAA), version 4.1, niveau AA.",
+            "bullets": {
+              "b1": "La navigation au clavier et à l'écran tactile est prise en charge sur l'ensemble des pages.",
+              "b2": "Les contenus textuels respectent les règles de contraste et de lisibilité définies par le référentiel.",
+              "b3": "Certains composants interactifs avancés restent à harmoniser avec les recommandations du référentiel."
+            }
+          },
+          "nonAccessibles": {
+            "kicker": "Exceptions",
+            "title": "Contenus non accessibles",
+            "lead": "Malgré notre vigilance, certains contenus peuvent présenter des difficultés d'accès. Les éléments suivants ne sont pas encore accessibles :",
+            "bullets": {
+              "b1": "Les documents publiés au format PDF antérieurs à la date d'entrée en vigueur de la présente déclaration.",
+              "b2": "Certains graphiques et visualisations de données, dont une alternative textuelle est prévue.",
+              "b3": "Quelques vidéos sans transcription intégrale, en cours de rattrapage."
+            }
+          },
+          "etablissement": {
+            "kicker": "Méthodologie",
+            "title": "Établissement de cette déclaration",
+            "lead": "Cette déclaration a été établie le 12 septembre 2026.",
+            "facts": {
+              "tests": {
+                "label": "Tests effectués",
+                "value": "Audit réalisé sur un échantillon représentatif de pages du portail"
+              },
+              "referentiel": {
+                "label": "Référentiel",
+                "value": "RGAA version 4.1, niveau AA"
+              },
+              "outils": {
+                "label": "Outils et méthodes",
+                "value": "Navigation clavier, lecteurs d'écran, vérification automatique des contrastes"
+              }
+            }
+          },
+          "retour": {
+            "kicker": "Contact",
+            "title": "Retour d'information et contact",
+            "lead": "Si vous rencontrez un défaut d'accessibilité vous empêchant d'accéder à un contenu ou à un service du portail, vous pouvez nous le signaler :",
+            "paragraphs": {
+              "p1": "Écrivez-nous via la page Contact, en précisant la nature du problème et la page concernée. Nous nous engageons à vous apporter une réponse dans un délai de cinq jours ouvrés."
+            }
+          },
+          "voiesRecours": {
+            "kicker": "Recours",
+            "title": "Voies de recours",
+            "lead": "Si vous n'avez pas obtenu de réponse satisfaisante à votre signalement, vous pouvez saisir :",
+            "bullets": {
+              "b1": "Le Défenseur des droits, qui peut être saisi en ligne ou par courrier.",
+              "b2": "La commission départementale de conciliation ou le tribunal compétent.",
+              "b3": "Toute procédure prévue par la loi du 8 juillet 2019 et son décret d'application."
+            }
+          }
+        }
+      },
+      "privacy": {
+        "meta": {
+          "title": "Confidentialité",
+          "description": "La politique de confidentialité du portail de la Bloctel : données personnelles, finalités et droits."
+        },
+        "hero": {
+          "kicker": "Informations légales",
+          "title": "Politique de confidentialité",
+          "lead": "La Bloctel accorde une attention particulière à la protection des données personnelles. Cette politique explique quelles données le portail traite, pourquoi, et quels droits vous sont reconnus.",
+          "notice": "Dernière mise à jour : 12 septembre 2026."
+        },
+        "sections": {
+          "responsable": {
+            "kicker": "Responsable",
+            "title": "Responsable de traitement",
+            "lead": "Les traitements de données personnelles opérés sur le portail sont placés sous la responsabilité de la Bloctel.",
+            "paragraphs": {
+              "p1": "Pour toute question relative à la protection de vos données personnelles, vous pouvez contacter notre délégué à la protection des données (DPD) à l'adresse indiquée ci-dessous."
+            },
+            "facts": {
+              "responsable": {
+                "label": "Responsable",
+                "value": "Bloctel"
+              },
+              "adresse": {
+                "label": "Adresse",
+                "value": "1 place de la Monnaie, 75001 Astoria"
+              },
+              "dpo": {
+                "label": "Délégué à la protection des données",
+                "value": "dpo@bca.astoria-gouv.org"
+              }
+            }
+          },
+          "donnees": {
+            "kicker": "Données",
+            "title": "Données collectées",
+            "lead": "Le portail collecte un volume minimal de données, limité à ce qui est strictement nécessaire au fonctionnement du service.",
+            "bullets": {
+              "b1": "Données de navigation : adresse IP, pages consultées, navigateur et résolution d'écran, à des fins de mesure d'audience et de sécurité.",
+              "b2": "Données d'identification des plateformes : identifiant de connexion, adresse électronique et préférences, uniquement pour les services authentifiés.",
+              "b3": "Données déclaratives : celles que vous saisissez volontairement dans un formulaire du portail.",
+              "b4": "Aucune donnée de paiement, donnée bancaire ou donnée sensible n'est traitée par le portail public."
+            }
+          },
+          "finalites": {
+            "kicker": "Finalités",
+            "title": "Finalités et bases légales",
+            "lead": "Chaque traitement du portail poursuit une finalité déterminée et repose sur une base légale.",
+            "paragraphs": {
+              "p1": "La mesure d'audience repose sur le consentement de l'internaute, recueilli via le bandeau de gestion des cookies. Les traitements liés à la sécurité du portail relèvent de la mission de service public de la Banque centrale.",
+              "p2": "Les traitements liés aux services authentifiés reposent sur l'exécution de la mission de service public ou, le cas échéant, sur un contrat ou un consentement explicite."
+            }
+          },
+          "conservation": {
+            "kicker": "Conservation",
+            "title": "Durée de conservation",
+            "lead": "Les données ne sont conservées que le temps nécessaire à la finalité poursuivie.",
+            "facts": {
+              "duree": {
+                "label": "Durée de conservation",
+                "value": "Durées limitées et définies pour chaque traitement"
+              },
+              "critere": {
+                "label": "Critère",
+                "value": "Nécessité de la finalité, délais légaux et prescription applicable"
+              }
+            }
+          },
+          "droits": {
+            "kicker": "Vos droits",
+            "title": "Vos droits",
+            "lead": "Conformément à la réglementation en vigueur, vous disposez de droits sur vos données personnelles :",
+            "bullets": {
+              "b1": "Droit d'accès, de rectification et d'effacement de vos données.",
+              "b2": "Droit à la limitation et à l'opposition au traitement.",
+              "b3": "Droit à la portabilité des données que vous avez fournies.",
+              "b4": "Droit de retirer votre consentement à tout moment, sans remettre en cause la licéité du traitement antérieur.",
+              "b5": "Droit d'introduire une réclamation auprès de l'autorité de contrôle compétente."
+            }
+          },
+          "cookies": {
+            "kicker": "Cookies",
+            "title": "Cookies et mesure d'audience",
+            "lead": "Le portail utilise des cookies strictement nécessaires ainsi que, sous réserve de votre consentement, des cookies de mesure d'audience.",
+            "paragraphs": {
+              "p1": "Vous pouvez accepter ou refuser ces cookies à tout moment depuis le bandeau dédié, ou depuis la page de gestion des cookies."
+            },
+            "notice": "La page de gestion des cookies décrit précisément les familles de cookies utilisées et leur durée de vie.",
+            "cta": "Consulter la page de gestion des cookies"
+          }
+        }
+      },
+      "terms": {
+        "meta": {
+          "title": "Conditions générales d'utilisation",
+          "description": "Les conditions générales d'utilisation du portail de la Bloctel."
+        },
+        "hero": {
+          "kicker": "Informations légales",
+          "title": "Conditions générales d'utilisation",
+          "lead": "L'accès et l'utilisation du portail de la Bloctel sont soumis aux conditions générales exposées ci-dessous. En naviguant sur le portail, vous les acceptez.",
+          "notice": "Dernière mise à jour : 12 septembre 2026."
+        },
+        "sections": {
+          "objet": {
+            "kicker": "Objet",
+            "title": "Objet",
+            "lead": "Le portail de la Bloctel est le site institutionnel de la Banque centrale de la République d'Astoria.",
+            "paragraphs": {
+              "p1": "Il présente les missions de la Banque centrale, la politique monétaire, les données et statistiques officielles, ainsi que les services proposés aux établissements financiers, à l'État et aux citoyens.",
+              "p2": "Les présentes conditions fixent les règles d'utilisation du portail et encadrent la responsabilité de l'éditeur et de l'utilisateur."
+            }
+          },
+          "utilisation": {
+            "kicker": "Usage",
+            "title": "Utilisation du portail",
+            "lead": "Le portail est mis à disposition à titre d'information et de service public. Son utilisation est libre et gratuite.",
+            "bullets": {
+              "b1": "Les contenus sont fournis à titre informatif et ne constituent pas un conseil juridique, financier ou professionnel.",
+              "b2": "Il est interdit d'utiliser le portail à des fins frauduleuses, malveillantes ou contraires aux lois en vigueur.",
+              "b3": "Toute tentative d'altération des données ou de perturbation du service est prohibée.",
+              "b4": "L'éditeur s'efforce d'assurer l'exactitude des informations publiées, sans garantir l'absence totale d'erreurs."
+            }
+          },
+          "contenus": {
+            "kicker": "Contenus",
+            "title": "Contenus et données",
+            "lead": "Les contenus publiés sur le portail appartiennent à la Bloctel ou à des tiers titulaires de droits.",
+            "paragraphs": {
+              "p1": "Sauf mention contraire, les contenus (textes, données, images, tableaux) sont réutilisables dans le respect de la licence de réutilisation des informations publiques applicable.",
+              "p2": "Les marques, logos et signes distinctifs de la Banque centrale et de la République d'Astoria ne peuvent être reproduits sans autorisation préalable."
+            }
+          },
+          "responsabilite": {
+            "kicker": "Responsabilité",
+            "title": "Responsabilité",
+            "lead": "L'éditeur met tout en œuvre pour garantir la disponibilité et l'exactitude du portail, dans la limite des moyens techniques disponibles.",
+            "paragraphs": {
+              "p1": "La responsabilité de l'éditeur ne peut être engagée en cas d'interruption temporaire du service, de présence de liens vers des sites tiers, ou d'utilisation inappropriée des informations publiées.",
+              "p2": "L'utilisateur est responsable de l'usage qu'il fait des informations du portail et des données qu'il saisit."
+            }
+          },
+          "liens": {
+            "kicker": "Liens",
+            "title": "Liens",
+            "lead": "Le portail peut contenir des liens vers des sites tiers, publics ou privés.",
+            "paragraphs": {
+              "p1": "L'éditeur n'exerce aucun contrôle sur ces sites et n'est pas responsable de leur contenu, de leur accessibilité ou de leurs pratiques en matière de protection des données."
+            }
+          },
+          "modification": {
+            "kicker": "Évolution",
+            "title": "Modification des conditions",
+            "lead": "Les présentes conditions peuvent être modifiées à tout moment, notamment pour tenir compte des évolutions du service.",
+            "paragraphs": {
+              "p1": "La version applicable est celle en vigueur au moment de votre navigation sur le portail. Les conditions modifiées entrent en vigueur dès leur publication."
+            },
+            "notice": "Toute évolution du portail donne lieu à une mise à jour de cette page."
+          }
+        }
+      },
+      "cookies": {
+        "meta": {
+          "title": "Gestion des cookies",
+          "description": "Les cookies utilisés par le portail de la Bloctel et la façon de les gérer."
+        },
+        "hero": {
+          "kicker": "Informations légales",
+          "title": "Gestion des cookies",
+          "lead": "Cette page décrit les cookies déposés par le portail de la Bloctel, leur finalité et la façon de les accepter ou de les refuser.",
+          "notice": "Dernière mise à jour : 12 septembre 2026."
+        },
+        "sections": {
+          "definition": {
+            "kicker": "Définition",
+            "title": "Qu'est-ce qu'un cookie ?",
+            "lead": "Un cookie est un petit fichier texte déposé sur votre appareil lors de la consultation d'un site.",
+            "paragraphs": {
+              "p1": "Les cookies permettent de mémoriser des informations relatives à votre navigation (préférences, langue, mesures d'audience) afin d'améliorer votre expérience et de comprendre l'utilisation du portail.",
+              "p2": "Le portail ne dépose que des cookies strictement nécessaires et, sous réserve de votre consentement, des cookies de mesure d'audience. Aucun cookie publicitaire n'est utilisé."
+            }
+          },
+          "cookiesDeposes": {
+            "kicker": "Inventaire",
+            "title": "Les cookies déposés par le portail",
+            "lead": "Le tableau ci-dessous recense les familles de cookies utilisées par le portail et leur durée de conservation.",
+            "table": {
+              "caption": "Inventaire des cookies du portail",
+              "headers": {
+                "0": "Cookie",
+                "1": "Finalité",
+                "2": "Durée de conservation"
+              },
+              "rows": {
+                "0": {
+                  "0": "bc_consent",
+                  "1": "Mémorisation de votre choix de gestion des cookies",
+                  "2": "6 mois"
+                },
+                "1": {
+                  "0": "bc_session",
+                  "1": "Fonctionnement technique du portail (session de navigation)",
+                  "2": "Durée de la session"
+                },
+                "2": {
+                  "0": "bc_lang",
+                  "1": "Mémorisation de la langue choisie",
+                  "2": "13 mois"
+                },
+                "3": {
+                  "0": "bc_audience",
+                  "1": "Mesure d'audience anonymisée, sous réserve de votre consentement",
+                  "2": "13 mois"
+                }
+              },
+              "note": "Inventaire de démonstration : la liste définitive des cookies sera publiée avec le déploiement complet du portail."
+            }
+          },
+          "gestion": {
+            "kicker": "Gestion",
+            "title": "Gérer vos cookies",
+            "lead": "Vous pouvez accepter ou refuser les cookies non essentiels à tout moment, selon le moyen qui vous convient :",
+            "bullets": {
+              "b1": "Depuis le bandeau de gestion des cookies, affiché lors de votre première visite en bas à gauche de l'écran.",
+              "b2": "En configurant votre navigateur pour refuser ou supprimer les cookies.",
+              "b3": "En supprimant les cookies déjà déposés depuis les paramètres de votre navigateur."
+            },
+            "notice": "Le refus des cookies de mesure d'audience n'altère pas le fonctionnement du portail."
+          }
+        }
+      }
+    },
+    "sitemap": {
+      "meta": {
+        "title": "Plan du portail",
+        "description": "Le plan du portail de la Bloctel : l'ensemble des pages du site, organisé par thème."
+      },
+      "hero": {
+        "kicker": "Plan du portail",
+        "title": "Plan du portail",
+        "lead": "L'ensemble des pages du portail de la Bloctel, organisé selon les sept entrées de la navigation."
+      },
+      "sections": {
+        "portail": {
+          "kicker": "Navigation",
+          "title": "Les entrées du portail",
+          "lead": "Chaque entrée du portail ouvre sur quatre thèmes, accessibles ci-dessous dans leur ordre de navigation."
+        },
+        "transversal": {
+          "kicker": "Accès rapides",
+          "title": "Pages transverses",
+          "lead": "Les pages utilitaires et d'information du portail, accessibles depuis le pied de page.",
+          "links": {
+            "contact": "Contact",
+            "accessibility": "Accessibilité",
+            "privacy": "Confidentialité",
+            "terms": "Conditions générales d'utilisation",
+            "cookies": "Gestion des cookies",
+            "publications": "Publications officielles",
+            "documentsOpposables": "Documents opposables"
+          }
+        }
+      }
+    }
+  },
+  "stayInTouch": {
+    "newsletter": {
+      "title": "Abonnez-vous à la lettre d'information",
+      "desc": "Recevez chaque mois l'essentiel de la Bloctel : décisions de politique monétaire, publications et actualités de l'institution.",
+      "label": "Votre adresse e-mail",
+      "placeholder": "prenom.nom@exemple.aor",
+      "submit": "S'abonner",
+      "success": "Votre inscription est confirmée. Merci !",
+      "hint": "Vous pouvez vous désinscrire à tout moment.",
+      "invalidEmail": "Veuillez saisir une adresse e-mail valide."
+    },
+    "follow": {
+      "title": "Suivez la Banque centrale",
+      "items": {
+        "x": "X",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram",
+        "threads": "Threads"
+      }
+    }
+  },
+  "home": {
+    "metaTitle": "Bloctel",
+    "hero": {
+      "kicker": "Service public",
+      "title": "Reprenez le contrôle de vos communications",
+      "lead": "Bloctel est le service public qui vous permet de gérer les communications commerciales que vous acceptez ou refusez de recevoir, et de signaler celles qui sont indésirables.",
+      "ctaPreferences": "Gérer mes préférences",
+      "ctaSignaler": "Signaler une communication indésirable",
+      "proLink": "Vous êtes professionnel ? Accéder au portail professionnel"
+    },
+    "search": {
+      "title": "Rechercher sur le portail",
+      "label": "Rechercher",
+      "placeholder": "Rechercher un droit, un numéro, une démarche…",
+      "popularLabel": "Recherches fréquentes",
+      "popular": {
+        "mInscrire": "M'inscrire à Bloctel",
+        "signalement": "Signaler un appel",
+        "demarchage": "Démarchage téléphonique",
+        "preferences": "Gérer mes préférences",
+        "reglementation": "Réglementation"
+      }
+    },
+    "how": {
+      "kicker": "Comprendre Bloctel",
+      "title": "Comment ça marche ?",
+      "lead": "Bloctel repose sur un principe simple : vous décidez des communications commerciales que vous acceptez de recevoir.",
+      "steps": {
+        "choisir": "Vous choisissez",
+        "enregistre": "Bloctel enregistre vos préférences",
+        "verifient": "Les professionnels vérifient leurs campagnes"
+      },
+      "note": "Vos préférences s'appliquent aux professionnels tenus de consulter le registre d'opposition avant toute campagne."
+    },
+    "controls": {
+      "kicker": "Que puis-je contrôler ?",
+      "title": "Vos canaux de communication",
+      "lead": "Bloctel vous permet d'encadrer les principaux canaux de communication commerciale.",
+      "items": {
+        "telephone": {
+          "title": "Téléphone",
+          "desc": "Décidez si vous souhaitez recevoir des appels commerciaux et signalez ceux qui ne respectent pas votre choix."
+        },
+        "sms": {
+          "title": "SMS",
+          "desc": "Encadrez la réception de messages commerciaux sur votre téléphone."
+        },
+        "email": {
+          "title": "E-mail",
+          "desc": "Encadrez la réception de courriels commerciaux."
+        },
+        "courrier": {
+          "title": "Courrier",
+          "desc": "Encadrez la réception de courriers et de publicités par voie postale."
+        },
+        "notifications": {
+          "title": "Notifications numériques",
+          "desc": "Encadrez les sollicitations commerciales envoyées sur vos appareils."
+        }
+      }
+    },
+    "preferences": {
+      "kicker": "Gérer mes préférences",
+      "title": "Vos préférences de communication",
+      "lead": "Un espace unique pour indiquer, pour chaque canal, les communications que vous acceptez de recevoir.",
+      "demoNote": "Interface de démonstration : les préférences ci-dessous illustrent le concept. Connectez-vous pour gérer vos préférences réelles.",
+      "cta": "Gérer mes préférences",
+      "items": {
+        "appels": {
+          "channel": "Appels commerciaux",
+          "status": "Bloqués"
+        },
+        "sms": {
+          "channel": "SMS commerciaux",
+          "status": "Autorisés"
+        },
+        "emails": {
+          "channel": "E-mails commerciaux",
+          "status": "Bloqués"
+        },
+        "courrier": {
+          "channel": "Courrier",
+          "status": "Bloqué"
+        }
+      }
+    },
+    "report": {
+      "kicker": "Signaler",
+      "title": "Signaler une communication indésirable",
+      "lead": "Une communication commerciale vous importune malgré votre opposition ? Signalez-la : votre signalement sera pris en compte et suivi.",
+      "steps": {
+        "identifier": {
+          "title": "Identifier la communication",
+          "text": "Notez le numéro, le canal et la date de la communication reçue."
+        },
+        "transmettre": {
+          "title": "Transmettre les informations",
+          "text": "Renseignez le formulaire de signalement avec les éléments en votre possession."
+        },
+        "suivre": {
+          "title": "Suivre le signalement",
+          "text": "Consultez l'avancement et les suites données à votre signalement."
+        }
+      },
+      "note": "Un signalement peut contribuer aux enquêtes menées par les autorités compétentes.",
+      "cta": "Faire un signalement",
+      "ctaSecondary": "Consulter mes signalements"
+    },
+    "pro": {
+      "kicker": "Professionnels",
+      "title": "Le portail professionnel",
+      "lead": "Les entreprises et organisations qui réalisent des campagnes commerciales ont des obligations : consulter le registre, respecter les choix des consommateurs et conserver la preuve du consentement.",
+      "entries": {
+        "verifierContact": {
+          "title": "Vérifier un contact",
+          "desc": "Interrogez le registre avant de contacter un numéro."
+        },
+        "verifierCampagne": {
+          "title": "Vérifier une campagne",
+          "desc": "Contrôlez vos fichiers avant chaque campagne."
+        },
+        "apiBloctel": {
+          "title": "API Bloctel",
+          "desc": "Intégrez la vérification dans vos outils."
+        },
+        "obligations": {
+          "title": "Obligations professionnelles",
+          "desc": "Connaissez vos obligations et les sanctions encourues."
+        }
+      },
+      "cta": "Accéder au portail professionnel"
+    },
+    "proHow": {
+      "kicker": "Fonctionnement pour les professionnels",
+      "title": "Comment vérifier une campagne ?",
+      "lead": "Avant chaque campagne, le professionnel s'assure de ne pas contacter de numéros opposés au démarchage.",
+      "steps": {
+        "fichier": "Votre fichier",
+        "verification": "Vérification Bloctel",
+        "contacts": "Contacts autorisés / exclus",
+        "campagne": "Campagne conforme"
+      },
+      "note": "La vérification porte sur les numéros opposés au démarchage, selon vos préférences."
+    },
+    "legal": {
+      "kicker": "Droits et réglementation",
+      "title": "Vos droits, le cadre légal",
+      "lead": "Le démarchage téléphonique est encadré. Découvrez vos droits, les obligations des professionnels et les contrôles organisés.",
+      "entries": {
+        "vosDroits": "Vos droits",
+        "consentement": "Consentement",
+        "revocation": "Révocation",
+        "exceptions": "Exceptions",
+        "obligations": "Obligations professionnelles",
+        "controles": "Contrôles et sanctions"
+      },
+      "cta": "Consulter la réglementation"
+    },
+    "help": {
+      "kicker": "Aide",
+      "title": "Où trouver de l'aide ?",
+      "lead": "Une question, un doute, une difficulté ? Les réponses et les contacts utiles sont regroupés ici.",
+      "entries": {
+        "questionsFrequentes": {
+          "title": "Questions fréquentes",
+          "desc": "Les réponses aux questions les plus courantes."
+        },
+        "guides": {
+          "title": "Guides",
+          "desc": "Des guides pas à pas pour le citoyen et le professionnel."
+        },
+        "assistance": {
+          "title": "Assistance",
+          "desc": "Une question sans réponse ? Contactez l'assistance."
+        },
+        "contact": {
+          "title": "Contact",
+          "desc": "Les coordonnées du service."
+        }
+      },
+      "cta": "Toute l'aide"
+    },
+    "trust": {
+      "kicker": "Transparence",
+      "title": "Un service public de confiance",
+      "lead": "Bloctel est un service public. La transparence sur son fonctionnement, sa disponibilité et la protection de vos données fait partie de sa mission.",
+      "items": {
+        "etatService": "État du service",
+        "disponibilite": "Disponibilité",
+        "api": "API",
+        "donneesPubliques": "Données publiques",
+        "securite": "Sécurité",
+        "protectionDonnees": "Protection des données",
+        "aPropos": "Informations sur Bloctel"
+      },
+      "note": "Les données publiées reflètent le fonctionnement du service ; aucune statistique n'est présentée tant qu'une source officielle n'est pas disponible."
+    }
+  }
+}
