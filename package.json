@@ -68,7 +68,7 @@
   "packageManager": "pnpm@8.15.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codegouvaor/defense.git"
+    "url": "https://github.com/codegouvaor/bloctel.git"
   },
   "keywords": [
     "news",
@@ -85,9 +85,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codegouvaor/defense/issues"
+    "url": "https://github.com/codegouvaor/bloctel/issues"
   },
-  "homepage": "https://github.com/codegouvaor/defense#readme",
+  "homepage": "https://github.com/codegouvaor/bloctel#readme",
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix --quiet",

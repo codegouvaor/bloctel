@@ -1,4 +1,4 @@
-module github.com/codegouvaor/defense
+module github.com/codegouvaor/bloctel
 
 go 1.25.5
 
